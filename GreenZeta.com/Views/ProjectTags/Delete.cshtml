@@ -1,0 +1,28 @@
+﻿@model GreenZeta.com.Models.ProjectTag
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>ProjectTag</legend>
+
+    <div class="display-label">projectId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.projectId)
+    </div>
+
+    <div class="display-label">tagId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tagId)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

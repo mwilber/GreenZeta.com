@@ -1,0 +1,25 @@
+﻿@model GreenZeta.com.Models.ProjectTag
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ProjectTag</legend>
+
+    <div class="display-label">projectId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.projectId)
+    </div>
+
+    <div class="display-label">tagId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tagId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
