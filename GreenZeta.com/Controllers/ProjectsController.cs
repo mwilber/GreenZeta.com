@@ -21,6 +21,24 @@ namespace GreenZeta.com.Controllers
             return View(db.Projects.ToList());
         }
 
+        public ActionResult SearchIndex(string id)
+        {
+            var projects = from m in db.Projects select m;
+
+            if (!String.IsNullOrEmpty(id))
+            {
+                projects = projects.Where(s => s.alias.Equals(id));
+            }
+
+            return View(projects);
+        }
+
+        [HttpPost]
+        public string SearchIndex(FormCollection fc, string id)
+        {
+            return "<h3> From [HttpPost]SearchIndex: " + id + "</h3>";
+        }
+
         //
         // GET: /Projects/Details/5
 
