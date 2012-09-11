@@ -14,6 +14,7 @@ namespace GreenZeta.com.Models
         public string       caption { get; set; }
         public string       description { get; set; }
         public string       link { get; set; }
+        public string       icon { get; set; }
         public DateTime     launchDate { get; set; }
     }
 
