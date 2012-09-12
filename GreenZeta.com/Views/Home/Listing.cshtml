@@ -1,0 +1,17 @@
+﻿@model IEnumerable<GreenZeta.com.Models.Project>
+@{
+    ViewBag.Title = "Listing";
+    Layout = "~/Views/Shared/_LayoutGZ.cshtml";
+}
+
+@foreach (var item in Model) {
+    
+    <div>
+        @Html.DisplayFor(modelItem => item.title)
+        <br />
+        @Html.DisplayFor(modelItem => item.caption)
+        <br />
+        @Html.ActionLink("View","Profile",new {id = item.alias})
+    </div>
+
+}
