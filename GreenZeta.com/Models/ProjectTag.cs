@@ -8,13 +8,11 @@ namespace GreenZeta.com.Models
 {
     public class ProjectTag
     {
-        public int id { get; set; }
-        public int projectId { get; set; }
-        public int tagId { get; set; }
+        public int ProjectTagID { get; set; }
+        public int ProjectID { get; set; }
+        public int TagID { get; set; }
+        public virtual Project Project { get; set; }
+        public virtual Tag Tag { get; set; }
     }
 
-    public class ProjectTagDBContext : DbContext
-    {
-        public DbSet<ProjectTag> ProjectTags { get; set; }
-    }
 }

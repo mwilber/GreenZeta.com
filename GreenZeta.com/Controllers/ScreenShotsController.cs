@@ -5,13 +5,14 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using GreenZeta.com.DAL;
 using GreenZeta.com.Models;
 
 namespace GreenZeta.com.Controllers
 { 
     public class ScreenShotsController : Controller
     {
-        private ScreenShotDBContext db = new ScreenShotDBContext();
+        private PortfolioContext db = new PortfolioContext();
 
         //
         // GET: /ScreenShots/

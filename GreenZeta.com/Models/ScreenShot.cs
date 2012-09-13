@@ -8,14 +8,11 @@ namespace GreenZeta.com.Models
 {
     public class ScreenShot
     {
-        public int id { get; set; }
+        public int ScreenShotID { get; set; }
         public string url { get; set; }
         public string caption { get; set; }
-        public int projectId { get; set; }
+        public int ProjectID { get; set; }
+        public virtual Project Project { get; set; }
     }
 
-    public class ScreenShotDBContext : DbContext
-    {
-        public DbSet<ScreenShot> ScreenShots { get; set; }
-    }
 }

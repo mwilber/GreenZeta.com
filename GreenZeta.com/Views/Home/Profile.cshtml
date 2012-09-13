@@ -7,3 +7,23 @@
 <h2>Profile</h2>
 
 @Model.FirstOrDefault().title
+
+<h3>Tags</h3>
+<ul>
+@foreach (var item in Model.FirstOrDefault().ProjectTags)
+{
+    <li>
+        @Html.DisplayFor(modelItem => item.Tag.name)
+    </li>
+}
+</ul>
+<h3>Screen Shots</h3>
+<ul>
+@foreach (var item in Model.FirstOrDefault().ScreenShots)
+{
+    <li>
+        @Html.DisplayFor(modelItem => item.url)
+    </li>
+}
+</ul>
+

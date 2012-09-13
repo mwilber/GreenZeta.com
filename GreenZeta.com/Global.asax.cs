@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Data.Entity;
+using GreenZeta.com.Models;
+using GreenZeta.com.DAL;
 
 namespace GreenZeta.com
 {
@@ -35,6 +38,8 @@ namespace GreenZeta.com
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            Database.SetInitializer<PortfolioContext>(new PortfolioInitializer());
         }
     }
 }

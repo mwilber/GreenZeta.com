@@ -5,13 +5,14 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using GreenZeta.com.DAL;
 using GreenZeta.com.Models;
 
 namespace GreenZeta.com.Controllers
 { 
     public class ProjectTagsController : Controller
     {
-        private ProjectTagDBContext db = new ProjectTagDBContext();
+        private PortfolioContext db = new PortfolioContext();
 
         //
         // GET: /ProjectTags/

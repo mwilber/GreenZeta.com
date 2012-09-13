@@ -11,15 +11,15 @@
 
     <div class="display-label">projectId</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.projectId)
+        @Html.DisplayFor(model => model.ProjectID)
     </div>
 
     <div class="display-label">tagId</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.tagId)
+        @Html.DisplayFor(model => model.TagID)
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProjectTagID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

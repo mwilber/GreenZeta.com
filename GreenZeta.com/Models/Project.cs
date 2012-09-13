@@ -8,7 +8,7 @@ namespace GreenZeta.com.Models
 {
     public class Project
     {
-        public int          id { get; set; }
+        public int          ProjectID { get; set; }
         public string       alias { get; set; }
         public string       title { get; set; }
         public string       caption { get; set; }
@@ -16,10 +16,7 @@ namespace GreenZeta.com.Models
         public string       link { get; set; }
         public string       icon { get; set; }
         public DateTime     launchDate { get; set; }
-    }
-
-    public class ProjectDBContext : DbContext
-    {
-        public DbSet<Project> Projects { get; set; }
+        public virtual ICollection<ProjectTag> ProjectTags { get; set; }
+        public virtual ICollection<ScreenShot> ScreenShots { get; set; }
     }
 }
