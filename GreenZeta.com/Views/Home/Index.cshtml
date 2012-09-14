@@ -1,6 +1,19 @@
-﻿@{
+﻿@model GreenZeta.com.ViewModels.HomeIndexData
+@{
     ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_LayoutGZ.cshtml";
 }
 
-<h2>@ViewBag.Message</h2>
+<h2>Featured</h2>
+<ul>
+@foreach (var item in Model.featuredProjects)
+{
+    <li>@Html.ActionLink(item.title, "Profile", new { id = item.alias })</li>
+}
+</ul>
+
+<h2>Tag Cloud</h2>
+@foreach (var item in Model.tagCloud)
+{
+    @Html.ActionLink(item.name, "Listing", new { id = item.name })
+}

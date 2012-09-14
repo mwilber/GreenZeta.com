@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using GreenZeta.com.DAL;
 using GreenZeta.com.Models;
+using GreenZeta.com.ViewModels;
 
 namespace GreenZeta.com.Controllers
 {
@@ -12,35 +13,33 @@ namespace GreenZeta.com.Controllers
     {
         private PortfolioContext db = new PortfolioContext();
 
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            ViewBag.Message = "Home Page";
+            var viewModel = new HomeIndexData();
 
-            return View();
+            viewModel.tagCloud = from tg in db.Tags select tg;
+            viewModel.featuredProjects = from prj in db.Projects select prj;
+
+            return View(viewModel);
         }
 
         public ActionResult Listing(string id)
         {
-            var projects = from prj in db.Projects 
-                           where prj.ProjectID.Equals(from prjtg in db.ProjectTags where prjtg.Tag.name == id select prjtg)
+            var projects = from prj in db.Projects
+                           join prjtg in db.ProjectTags on prj.ProjectID equals prjtg.ProjectID
+                           where prjtg.Tag.name == id
                            select prj;
-
-            //var pageObject = (from op in db.ObjectPermissions
-            //      join pg in db.Pages on op.ObjectPermissionName equals page.PageName
-            //      where pg.PageID == page.PageID
-            //      select new { pg, op }).SingleOrDefault();
 
             return View(projects);
         }
 
         public ActionResult Profile(string id)
         {
-            var projects = from m in db.Projects select m;
+            //var projects = db.Projects.Single(s => s.alias == id);
 
-            if (!String.IsNullOrEmpty(id))
-            {
-                projects = projects.Where(s => s.alias == id);
-            }
+               // projects = projects.Single(s => s.alias == id);
+
+            var projects = db.Projects.Where(s => s.alias == id).Take(1).ToList();
 
             return View(projects);
         }
