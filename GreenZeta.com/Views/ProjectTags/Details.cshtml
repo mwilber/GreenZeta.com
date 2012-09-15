@@ -9,14 +9,14 @@
 <fieldset>
     <legend>ProjectTag</legend>
 
-    <div class="display-label">projectId</div>
+    <div class="display-label">Project</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.ProjectID)
+        @Html.DisplayFor(model => model.Project.alias)
     </div>
 
-    <div class="display-label">tagId</div>
+    <div class="display-label">Tag</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.TagID)
+        @Html.DisplayFor(model => model.Tag.name)
     </div>
 </fieldset>
 <p>

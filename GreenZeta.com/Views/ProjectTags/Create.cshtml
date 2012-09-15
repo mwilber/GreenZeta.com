@@ -15,18 +15,18 @@
         <legend>ProjectTag</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.ProjectID)
+            @Html.LabelFor(model => model.ProjectID, "Project")
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.ProjectID)
+            @Html.DropDownList("ProjectID", String.Empty)
             @Html.ValidationMessageFor(model => model.ProjectID)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.TagID)
+            @Html.LabelFor(model => model.TagID, "Tag")
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.TagID)
+            @Html.DropDownList("TagID", String.Empty)
             @Html.ValidationMessageFor(model => model.TagID)
         </div>
 

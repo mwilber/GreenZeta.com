@@ -20,9 +20,9 @@
         @Html.DisplayFor(model => model.caption)
     </div>
 
-    <div class="display-label">projectId</div>
+    <div class="display-label">Project</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.ProjectID)
+        @Html.DisplayFor(model => model.Project.alias)
     </div>
 </fieldset>
 @using (Html.BeginForm()) {

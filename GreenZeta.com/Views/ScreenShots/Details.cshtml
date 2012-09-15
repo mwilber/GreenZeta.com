@@ -19,12 +19,12 @@
         @Html.DisplayFor(model => model.caption)
     </div>
 
-    <div class="display-label">projectId</div>
+    <div class="display-label">Project</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.ProjectID)
+        @Html.DisplayFor(model => model.Project.alias)
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ScreenShotID }) |
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ScreenShotID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

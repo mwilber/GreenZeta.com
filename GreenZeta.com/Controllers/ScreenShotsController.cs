@@ -5,8 +5,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using GreenZeta.com.DAL;
 using GreenZeta.com.Models;
+using GreenZeta.com.DAL;
 
 namespace GreenZeta.com.Controllers
 { 
@@ -19,7 +19,8 @@ namespace GreenZeta.com.Controllers
 
         public ViewResult Index()
         {
-            return View(db.ScreenShots.ToList());
+            var screenshots = db.ScreenShots.Include(s => s.Project);
+            return View(screenshots.ToList());
         }
 
         //
@@ -36,6 +37,7 @@ namespace GreenZeta.com.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.ProjectID = new SelectList(db.Projects, "ProjectID", "alias");
             return View();
         } 
 
@@ -52,6 +54,7 @@ namespace GreenZeta.com.Controllers
                 return RedirectToAction("Index");  
             }
 
+            ViewBag.ProjectID = new SelectList(db.Projects, "ProjectID", "alias", screenshot.ProjectID);
             return View(screenshot);
         }
         
@@ -61,6 +64,7 @@ namespace GreenZeta.com.Controllers
         public ActionResult Edit(int id)
         {
             ScreenShot screenshot = db.ScreenShots.Find(id);
+            ViewBag.ProjectID = new SelectList(db.Projects, "ProjectID", "alias", screenshot.ProjectID);
             return View(screenshot);
         }
 
@@ -76,6 +80,7 @@ namespace GreenZeta.com.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.ProjectID = new SelectList(db.Projects, "ProjectID", "alias", screenshot.ProjectID);
             return View(screenshot);
         }
 

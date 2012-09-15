@@ -5,8 +5,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using GreenZeta.com.DAL;
 using GreenZeta.com.Models;
+using GreenZeta.com.DAL;
 
 namespace GreenZeta.com.Controllers
 { 
@@ -19,7 +19,8 @@ namespace GreenZeta.com.Controllers
 
         public ViewResult Index()
         {
-            return View(db.ProjectTags.ToList());
+            var projecttags = db.ProjectTags.Include(p => p.Project).Include(p => p.Tag);
+            return View(projecttags.ToList());
         }
 
         //
@@ -36,6 +37,8 @@ namespace GreenZeta.com.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.ProjectID = new SelectList(db.Projects, "ProjectID", "alias");
+            ViewBag.TagID = new SelectList(db.Tags, "TagID", "name");
             return View();
         } 
 
@@ -52,6 +55,8 @@ namespace GreenZeta.com.Controllers
                 return RedirectToAction("Index");  
             }
 
+            ViewBag.ProjectID = new SelectList(db.Projects, "ProjectID", "alias", projecttag.ProjectID);
+            ViewBag.TagID = new SelectList(db.Tags, "TagID", "name", projecttag.TagID);
             return View(projecttag);
         }
         
@@ -61,6 +66,8 @@ namespace GreenZeta.com.Controllers
         public ActionResult Edit(int id)
         {
             ProjectTag projecttag = db.ProjectTags.Find(id);
+            ViewBag.ProjectID = new SelectList(db.Projects, "ProjectID", "alias", projecttag.ProjectID);
+            ViewBag.TagID = new SelectList(db.Tags, "TagID", "name", projecttag.TagID);
             return View(projecttag);
         }
 
@@ -76,6 +83,8 @@ namespace GreenZeta.com.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.ProjectID = new SelectList(db.Projects, "ProjectID", "alias", projecttag.ProjectID);
+            ViewBag.TagID = new SelectList(db.Tags, "TagID", "name", projecttag.TagID);
             return View(projecttag);
         }
 

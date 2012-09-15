@@ -18,7 +18,7 @@
 {
     if (group.FirstOrDefault().Tag.type == "medium")
     {
-    <li>@Html.ActionLink(group.FirstOrDefault().Tag.name + ": " + group.Count().ToString(), "Listing", new { id = "testing" })</li>
+    <li>@Html.ActionLink(group.FirstOrDefault().Tag.name + ": " + group.Count().ToString(), "Listing", new { id = group.FirstOrDefault().Tag.name })</li>
     }
 }
 </ul>

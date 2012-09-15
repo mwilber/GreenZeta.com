@@ -12,16 +12,13 @@
 <table>
     <tr>
         <th>
-            id
-        </th>
-        <th>
             url
         </th>
         <th>
             caption
         </th>
         <th>
-            projectId
+            Project
         </th>
         <th></th>
     </tr>
@@ -29,21 +26,18 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ScreenShotID)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.url)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.caption)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ProjectID)
+            @Html.DisplayFor(modelItem => item.Project.alias)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.ScreenShotID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.ScreenShotID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.ScreenShotID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.ScreenShotID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ScreenShotID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ScreenShotID })
         </td>
     </tr>
 }
