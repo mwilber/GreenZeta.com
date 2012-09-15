@@ -17,8 +17,20 @@ namespace GreenZeta.com.Controllers
         {
             var viewModel = new HomeIndexData();
 
-            viewModel.tagCloud = from tg in db.Tags select tg;
-            viewModel.featuredProjects = from prj in db.Projects select prj;
+            viewModel.tagCloud = from prjtg in db.Projects select prjtg;
+            viewModel.Products = from prj in db.Projects
+                                         join prjtg in db.ProjectTags on prj.ProjectID equals prjtg.ProjectID
+                                         where prjtg.Tag.name == "product"
+                                         select prj;
+            viewModel.featuredProjects = from prj in db.Projects
+                                         join prjtg in db.ProjectTags on prj.ProjectID equals prjtg.ProjectID
+                                         where prjtg.Tag.name == "featuredproject"
+                                         select prj;
+            viewModel.featuredProduct = from prj in db.Projects
+                                         join prjtg in db.ProjectTags on prj.ProjectID equals prjtg.ProjectID
+                                         where prjtg.Tag.name == "featuredproduct"
+                                         select prj;
+            viewModel.featuredProduct.Take(1).ToList();
 
             return View(viewModel);
         }
@@ -35,10 +47,6 @@ namespace GreenZeta.com.Controllers
 
         public ActionResult Profile(string id)
         {
-            //var projects = db.Projects.Single(s => s.alias == id);
-
-               // projects = projects.Single(s => s.alias == id);
-
             var projects = db.Projects.Where(s => s.alias == id).Take(1).ToList();
 
             return View(projects);
