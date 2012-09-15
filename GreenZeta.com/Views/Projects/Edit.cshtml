@@ -65,6 +65,14 @@
         </div>
 
         <div class="editor-label">
+            @Html.LabelFor(model => model.banner)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.banner)
+            @Html.ValidationMessageFor(model => model.banner)
+        </div>
+
+        <div class="editor-label">
             @Html.LabelFor(model => model.launchDate)
         </div>
         <div class="editor-field">
