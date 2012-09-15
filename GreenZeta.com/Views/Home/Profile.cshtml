@@ -8,6 +8,8 @@
 
 @Model.FirstOrDefault().title
 
+<img src="/images/portfolio/@Model.FirstOrDefault().icon" />
+
 <h3>Client</h3>
 <ul>
 @foreach (var item in Model.FirstOrDefault().ProjectTags)
@@ -39,7 +41,7 @@
 @foreach (var item in Model.FirstOrDefault().ScreenShots)
 {
     <li>
-        @Html.DisplayFor(modelItem => item.url)
+        <img src="/image?p=@Html.DisplayFor(modelItem => item.url)&w=150" />
     </li>
 }
 </ul>
