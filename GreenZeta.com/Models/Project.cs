@@ -15,6 +15,7 @@ namespace GreenZeta.com.Models
         public string       description { get; set; }
         public string       link { get; set; }
         public string       icon { get; set; }
+        public string       banner { get; set; }
         public DateTime     launchDate { get; set; }
         public virtual ICollection<ProjectTag> ProjectTags { get; set; }
         public virtual ICollection<ScreenShot> ScreenShots { get; set; }
