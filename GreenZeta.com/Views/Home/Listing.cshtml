@@ -6,13 +6,17 @@
     ViewBag.BodyClass = "listing";
     Layout = "~/Views/Shared/_LayoutGZ.cshtml";
 }
+<div class="row">
+	<div class="grid_12">
+		<a id="btn_home" href="/">Home</a>
+        <h2>Listing : @Model.tag</h2>
+	</div>
+</div>
 
-<a id="btn_home" href="/">Home</a>
-<h2>Listing : @Model.tag</h2>
 
+<div class="row">
 @foreach (var item in Model.projects) {
-    
-    <div class="project">
+    <div class="project grid_3">
         <a href="/home/profile/@item.alias">
         <img src="/images/portfolio/@item.icon" width="64" height="64" />
         @Html.DisplayFor(modelItem => item.title)
@@ -22,5 +26,5 @@
         View
         </a>
     </div>
-
 }
+</div>

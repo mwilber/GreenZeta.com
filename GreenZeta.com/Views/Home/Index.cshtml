@@ -6,45 +6,65 @@
     ViewBag.BodyClass = "index";
     Layout = "~/Views/Shared/_LayoutGZ.cshtml";
 }
-<div id="featuredproject">
-<h2>Featured</h2>
-<ul>
-@foreach (var item in Model.featuredProjects)
-{
-    <li>
-        <a href="/home/profile/@item.alias"><img src="/images/portfolio/@item.banner" /></a>
-    </li>
-}
-</ul>
-</div>
-<div id="taggroup">
-<h2>Tag Cloud</h2>
-<ul>
-@foreach (var group in Model.tagCloud.SelectMany(p => p.ProjectTags).GroupBy(c => c.Tag))
-{
-    if (group.FirstOrDefault().Tag.type == "medium")
+
+<div class="row">
+	<div id="featured" class="grid_12 royalSlider rsDefault">
+    @foreach (var item in Model.featuredProjects)
     {
-    <li class="tag-@(group.Count()/2)">@Html.ActionLink(group.FirstOrDefault().Tag.name + ": " + group.Count().ToString(), "Listing", new { id = group.FirstOrDefault().Tag.name })</li>
+        <div>
+			<a href="/home/profile/@item.alias"><img src="/images/portfolio/@item.banner" class="max-img rsImg" alt="This is caption text one" /></a>
+			<figure class="rsCaption">@item.title</figure>
+		</div>
     }
-}
-</ul>
+	</div>
 </div>
-<div id="featuredproduct">
-<h2>Featured Product</h2>
-<ul>
-    <li>
-        <a href="/home/profile/@Model.featuredProduct.FirstOrDefault().alias" style="background-image:url('/images/portfolio/@Model.featuredProduct.FirstOrDefault().banner');">@Model.featuredProduct.FirstOrDefault().title</a>
-    </li>
-</ul>
+<div class="row">
+	<div class="grid_6">
+		<h2>Tag Cloud</h2>
+        <ul>
+        @foreach (var group in Model.tagCloud.SelectMany(p => p.ProjectTags).GroupBy(c => c.Tag))
+        {
+            if (group.FirstOrDefault().Tag.type == "medium")
+            {
+            <li class="tag-@(group.Count() / 2)">@Html.ActionLink(group.FirstOrDefault().Tag.name + ": " + group.Count().ToString(), "Listing", new { id = group.FirstOrDefault().Tag.name })</li>
+            }
+        }
+        </ul>
+	</div>
+	<div class="grid_6">
+		<h2>Featured Product</h2>
+        <ul>
+            <li>
+                <a href="/home/profile/@Model.featuredProduct.FirstOrDefault().alias" style="background-image:url('/images/portfolio/@Model.featuredProduct.FirstOrDefault().banner');">@Model.featuredProduct.FirstOrDefault().title</a>
+            </li>
+        </ul>
+	</div>
 </div>
-<div id="productgroup">
-<h2>Products</h2>
-<ul>
-@foreach (var item in Model.Products)
-{
-    <li>
-        <a href="/home/profile/@item.alias"><img src="/images/portfolio/@item.icon" /></a>
-    </li>
-}
-</ul>
+<div class="row">
+	<div id="productsgroup" class="grid_12">
+		<h2>Products</h2>
+		<ul id="products">
+        @foreach (var item in Model.Products)
+        {
+            <li>
+                <a href="/home/profile/@item.alias"><img src="/images/portfolio/@item.icon" /><br />@item.title</a>
+            </li>
+        }
+        </ul>
+	</div>
+</div>
+<div class="row base">
+	<div class="grid_3"><span class="example"><h2>Preferred Technologies</h2></span></div>
+	<div id="newsgroup" class="grid_3">
+		<h2>News</h2>
+		<ul id="news" class="newsSlider rsDefault">
+			<li><a href="/">TitleHere 1</a></li>
+			<li><a href="/">TitleHere 2</a></li>
+			<li><a href="/">TitleHere 3</a></li>
+			<li><a href="/">TitleHere 4</a></li>
+			<li><a href="/">TitleHere 5</a></li>
+			<li><a href="/">TitleHere 6</a></li>
+		</ul>
+	</div>
+	<div class="grid_3"><h2>About</h2></div>
 </div>

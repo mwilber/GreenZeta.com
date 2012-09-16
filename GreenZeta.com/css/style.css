@@ -1,0 +1,66 @@
+.row div{
+	/*background-color: #eee;*/
+	padding: 0px;
+	margin-bottom:10px;
+}
+
+.royalSlider {
+	height: 400px;
+	position: relative;
+	direction: ltr;
+}
+
+.row div.rsGCaption {
+	width: 100%;
+	float: left;
+	text-align: center;
+	margin-top: -56px;
+	color: #eee;
+	background-color: #000;
+	position: relative;
+	opacity:0.8;
+	font-size:24px;
+	font-weight:bold;
+}
+
+#productsgroup{
+	overflow-y:hidden;
+	overflow-x:scroll;
+}
+
+#products{
+	list-style:none;
+	width:1500px;
+}
+
+#products li{
+	background:none;
+	float:left;
+	margin: 10px 20px;
+	text-align:center;
+	width:130px;
+}
+
+#newsgroup{
+	overflow:hidden;
+}
+
+#news{
+	list-style:none;
+}
+
+#news li{
+	background: none;
+	background-color: #FEE;
+	float: left;
+	margin: 10px 10px;
+	text-align: center;
+	width: 170px;
+	height: 250px;
+}
+
+.newsSlider {
+	height: 250px;
+	position: relative;
+	direction: ltr;
+}
