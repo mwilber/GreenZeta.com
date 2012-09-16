@@ -37,12 +37,15 @@ namespace GreenZeta.com.Controllers
 
         public ActionResult Listing(string id)
         {
-            var projects = from prj in db.Projects
+            var viewModel = new HomeListingData();
+            viewModel.tag = id;
+
+            viewModel.projects = from prj in db.Projects
                            join prjtg in db.ProjectTags on prj.ProjectID equals prjtg.ProjectID
                            where prjtg.Tag.name == id
                            select prj;
 
-            return View(projects);
+            return View(viewModel);
         }
 
         public ActionResult Profile(string id)

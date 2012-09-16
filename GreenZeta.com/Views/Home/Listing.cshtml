@@ -1,17 +1,26 @@
-﻿@model IEnumerable<GreenZeta.com.Models.Project>
+﻿@model GreenZeta.com.ViewModels.HomeListingData
 @{
-    ViewBag.Title = "Listing";
+    ViewBag.Title = "GreenZeta Listing : " + Model.tag;
+    ViewBag.Icon = "";
+    ViewBag.Description = "";
+    ViewBag.BodyClass = "listing";
     Layout = "~/Views/Shared/_LayoutGZ.cshtml";
 }
 
-@foreach (var item in Model) {
+<a id="btn_home" href="/">Home</a>
+<h2>Listing : @Model.tag</h2>
+
+@foreach (var item in Model.projects) {
     
-    <div>
+    <div class="project">
+        <a href="/home/profile/@item.alias">
+        <img src="/images/portfolio/@item.icon" width="64" height="64" />
         @Html.DisplayFor(modelItem => item.title)
         <br />
         @Html.DisplayFor(modelItem => item.caption)
         <br />
-        @Html.ActionLink("View","Profile",new {id = item.alias})
+        View
+        </a>
     </div>
 
 }

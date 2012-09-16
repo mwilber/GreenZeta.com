@@ -1,37 +1,50 @@
 ﻿@model GreenZeta.com.ViewModels.HomeIndexData
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "GreenZeta";
+    ViewBag.Icon = "";
+    ViewBag.Description = "";
+    ViewBag.BodyClass = "index";
     Layout = "~/Views/Shared/_LayoutGZ.cshtml";
 }
-
+<div id="featuredproject">
 <h2>Featured</h2>
 <ul>
 @foreach (var item in Model.featuredProjects)
 {
-    <li>@Html.ActionLink(item.title, "Profile", new { id = item.alias })</li>
+    <li>
+        <a href="/home/profile/@item.alias"><img src="/images/portfolio/@item.banner" /></a>
+    </li>
 }
 </ul>
-
+</div>
+<div id="taggroup">
 <h2>Tag Cloud</h2>
 <ul>
 @foreach (var group in Model.tagCloud.SelectMany(p => p.ProjectTags).GroupBy(c => c.Tag))
 {
     if (group.FirstOrDefault().Tag.type == "medium")
     {
-    <li>@Html.ActionLink(group.FirstOrDefault().Tag.name + ": " + group.Count().ToString(), "Listing", new { id = group.FirstOrDefault().Tag.name })</li>
+    <li class="tag-@(group.Count()/2)">@Html.ActionLink(group.FirstOrDefault().Tag.name + ": " + group.Count().ToString(), "Listing", new { id = group.FirstOrDefault().Tag.name })</li>
     }
 }
 </ul>
-
+</div>
+<div id="featuredproduct">
 <h2>Featured Product</h2>
 <ul>
-    <li>@Html.ActionLink(@Model.featuredProduct.FirstOrDefault().title, "Profile", new { id = @Model.featuredProduct.FirstOrDefault().alias })</li>
+    <li>
+        <a href="/home/profile/@Model.featuredProduct.FirstOrDefault().alias" style="background-image:url('/images/portfolio/@Model.featuredProduct.FirstOrDefault().banner');">@Model.featuredProduct.FirstOrDefault().title</a>
+    </li>
 </ul>
-
+</div>
+<div id="productgroup">
 <h2>Products</h2>
 <ul>
 @foreach (var item in Model.Products)
 {
-    <li>@Html.ActionLink(item.title, "Profile", new { id = item.alias })</li>
+    <li>
+        <a href="/home/profile/@item.alias"><img src="/images/portfolio/@item.icon" /></a>
+    </li>
 }
 </ul>
+</div>

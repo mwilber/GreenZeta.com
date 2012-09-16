@@ -1,15 +1,18 @@
 ﻿@model IEnumerable<GreenZeta.com.Models.Project>
 @{
-    ViewBag.Title = "Profile";
+    ViewBag.Title = "GreenZeta Profile: "+Model.FirstOrDefault().title;
+    ViewBag.Icon = Model.FirstOrDefault().icon;
+    ViewBag.Description = Model.FirstOrDefault().caption;
+    ViewBag.BodyClass = "profile";
     Layout = "~/Views/Shared/_LayoutGZ.cshtml";
 }
 
-<h2>Profile</h2>
-
-@Model.FirstOrDefault().title
-
-<img src="/images/portfolio/@Model.FirstOrDefault().icon" />
-
+<div id="banner" style="background-image:url('/images/portfolio/@Model.FirstOrDefault().banner');">
+    <img src="/images/portfolio/@Model.FirstOrDefault().icon" width="128" height="128" />
+</div>
+<a id="btn_home" href="/">Home</a>
+<h2 id="title">@Model.FirstOrDefault().title</h2>
+<div id="clientgroup">
 <h3>Client</h3>
 <ul>
 @foreach (var item in Model.FirstOrDefault().ProjectTags)
@@ -17,12 +20,13 @@
     if (item.Tag.type == "client")
     {
     <li>
-        @Html.DisplayFor(modelItem => item.Tag.name)
+        @Html.ActionLink(item.Tag.name, "Listing", new { id = item.Tag.name })
     </li>
     }
 }
 </ul>
-
+</div>
+<div id="taggroup">
 <h3>Tags</h3>
 <ul>
 @foreach (var item in Model.FirstOrDefault().ProjectTags)
@@ -30,19 +34,20 @@
     if (item.Tag.type == "medium")
     {
     <li>
-        @Html.DisplayFor(modelItem => item.Tag.name)
+        @Html.ActionLink(item.Tag.name, "Listing", new { id = item.Tag.name })
     </li>
     }
 }
 </ul>
-
+</div>
+<div id="screengroup">
 <h3>Screen Shots</h3>
 <ul>
 @foreach (var item in Model.FirstOrDefault().ScreenShots)
 {
     <li>
-        <img src="/image?p=@Html.DisplayFor(modelItem => item.url)&w=150" />
+        <a href="/images/portfolio/@Html.DisplayFor(modelItem => item.url)" style="display:block; width:150px; height:150px; background-image:url('/image?p=@Html.DisplayFor(modelItem => item.url)&w=150');"></a>
     </li>
 }
 </ul>
-
+</div>

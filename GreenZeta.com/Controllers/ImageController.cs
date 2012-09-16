@@ -22,12 +22,12 @@ namespace GreenZeta.com.Controllers
             string imgFile = Request.QueryString["p"];
             string imgSize = Request.QueryString["w"];
 
-            //try
-            //{
+            try
+            {
                 if (imgSize != null) WriteThumbnail(imgFile, imgSize);
                 else WriteFullsize(imgFile);
-            //}
-            //catch (Exception) { }
+            }
+            catch (Exception) { }
 
             return "";
         }
@@ -58,11 +58,22 @@ namespace GreenZeta.com.Controllers
 
             //thumbNailImg = img.GetThumbnailImage(thumbWidth, thumbHeight, dummyCallBack, IntPtr.Zero);
             thumbNailImg = resizeImage(img, new Size(thumbWidth, thumbHeight));
-            croppedImg = cropImage(thumbNailImg, new Rectangle(0, 0, thumbNailImg.Width, thumbNailImg.Width));
 
-            Response.ContentType = "image/jpeg";
-            croppedImg.Save(Response.OutputStream, System.Drawing.Imaging.ImageFormat.Jpeg);
-            croppedImg.Dispose();
+            try
+            {
+                croppedImg = cropImage(thumbNailImg, new Rectangle(0, 0, thumbNailImg.Width, thumbNailImg.Width));
+                Response.ContentType = "image/jpeg";
+                croppedImg.Save(Response.OutputStream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                croppedImg.Dispose();
+            }
+            catch (Exception) {
+                Response.ContentType = "image/jpeg";
+                thumbNailImg.Save(Response.OutputStream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                thumbNailImg.Dispose();
+            }
+            
+
+            
         }
 
 
