@@ -1,8 +1,18 @@
+.row
+{
+    margin-bottom:10px;
+}
+
 .row div{
 	/*background-color: #eee;*/
 	padding: 0px;
-	margin-bottom:10px;
+	/*margin-bottom:10px;*/
 }
+
+
+/*--------------------
+    Featured 
+  --------------------*/
 
 .royalSlider {
 	height: 400px;
@@ -12,20 +22,127 @@
 
 .row div.rsGCaption {
 	width: 100%;
-	float: left;
-	text-align: center;
-	margin-top: -56px;
-	color: #eee;
-	background-color: #000;
-	position: relative;
-	opacity:0.8;
-	font-size:24px;
+    float: left;
+    text-align: left;
+    margin-top: -309px;
+    color: #EEE;
+    background-color: black;
+    position: relative;
+    opacity: 0.8;
+    padding: 10px 0px;
+}
+
+.row div.rsGCaption figure
+{
+    padding-left:50px;
+    font-size:30px;
 	font-weight:bold;
 }
+
+/*--------------------
+    Portfolio
+  --------------------*/
+
+#portfoliogroup
+{
+    background-color:#333;
+    height:250px;
+}
+
+#portfoliogroup h2
+{
+    margin:10px;
+}
+
+#portfoliogroup #portfolio
+{
+    list-style:none;
+    margin:10px;
+}
+
+#portfoliogroup #portfolio li
+{
+    float:left;
+    margin:5px;
+    padding:2px 5px;
+    background:#ccc none;
+    color:#333;
+    font-size:10px;
+    display: block;
+    height: 20px;
+}
+
+#portfoliogroup #portfolio li.tag-1
+{
+    font-size:14px;
+}
+
+#portfoliogroup #portfolio li.tag-2
+{
+    font-size:18px;
+}
+#portfoliogroup #portfolio li.tag-3
+{
+    font-size:14px;
+}
+
+#portfoliogroup #portfolio li a
+{
+    color:#333;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+
+/*--------------------
+    Featured Product
+  --------------------*/
+
+#featuredproduct
+{
+    width: 100%;
+    height: 250px;
+    display: block;
+    background-position: center center;
+    text-decoration:none;
+}
+
+#featuredproduct strong
+{
+    display: block;
+    height: 20px;
+    font-size: 25px;
+    line-height: 16px;
+    padding: 10px;
+}
+
+#featuredproduct span
+{
+    display: block;
+    margin: 135px 0px 0px 0px;
+    padding: 5px 20px;
+    min-height: 45px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    opacity: 0.7;
+}
+
+
+/*--------------------
+    Products
+  --------------------*/
 
 #productsgroup{
 	overflow-y:hidden;
 	overflow-x:scroll;
+	background-color:#333;
+}
+
+#productsgroup h2
+{
+    margin:10px;
 }
 
 #products{
@@ -41,26 +158,74 @@
 	width:130px;
 }
 
+
+/*--------------------
+    Tech
+  --------------------*/
+
+#techgroup{
+	overflow:hidden;
+	background-color:#333;
+	height: 250px;
+}
+
+#techgroup h2
+{
+    margin:10px;
+}
+
+
+/*--------------------
+    News
+  --------------------*/
+
 #newsgroup{
 	overflow:hidden;
+	background-color:#333;
+	height: 250px;
+}
+
+#newsgroup h2
+{
+    margin:10px;
 }
 
 #news{
 	list-style:none;
+	margin:0px;
 }
 
 #news li{
 	background: none;
-	background-color: #FEE;
-	float: left;
-	margin: 10px 10px;
-	text-align: center;
-	width: 170px;
-	height: 250px;
+}
+
+#news li a
+{
+    display:block;
+    width: 210px;
+	height: 190px;
+    color:#000;
+    background-color: #FEE;
+    text-align: center;
 }
 
 .newsSlider {
-	height: 250px;
 	position: relative;
 	direction: ltr;
+}
+
+
+/*--------------------
+    About
+  --------------------*/
+
+#aboutgroup{
+	overflow:hidden;
+	background-color:#333;
+	height: 250px;
+}
+
+#aboutgroup h2
+{
+    margin:10px;
 }

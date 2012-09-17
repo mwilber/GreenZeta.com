@@ -6,10 +6,10 @@
     ViewBag.BodyClass = "profile";
     Layout = "~/Views/Shared/_LayoutGZ.cshtml";
 }
-
+<div class="row">
 <div id="banner" style="background-image:url('/images/portfolio/@Model.FirstOrDefault().banner');">
     <img src="/images/portfolio/@Model.FirstOrDefault().icon" width="128" height="128" />
-</div>
+</div></div>
 <a id="btn_home" href="/">Home</a>
 <h2 id="title">@Model.FirstOrDefault().title</h2>
 <div id="clientgroup">

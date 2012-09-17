@@ -67,10 +67,12 @@
 	            autoScaleSliderHeight: 400,
 	            imageScaleMode: 'fill',
 	            globalCaption: true,
+                loopRewind: false,
 	            autoPlay: {
 	                // autoplay options go gere
 	                enabled: true,
-	                pauseOnHover: true
+	                pauseOnHover: true,
+                    delay: 3000
 	            }
 	        });
 	        $(".newsSlider").royalSlider({
@@ -78,8 +80,8 @@
 	            // as an example, enable keyboard arrows nav
 	            keyboardNavEnabled: true,
 	            autoScaleSlider: true,
-	            autoScaleSliderWidth: 240,
-	            autoScaleSliderHeight: 250,
+	            autoScaleSliderWidth: 210,
+	            autoScaleSliderHeight: 190,
 	            imageScaleMode: 'fill'
 	        });
 	    });
@@ -88,7 +90,7 @@
 <body class="@ViewBag.BodyClass">
     <div class="row">
 	    <div id="head" class="grid_12">
-		    <img src="http://www.placehold.it/960x100" class="max-img"/>
+		    <img src="http://www.placehold.it/1200x125" class="max-img"/>
 	    </div>
     </div>
     @RenderBody()

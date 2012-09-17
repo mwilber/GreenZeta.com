@@ -19,25 +19,23 @@
 	</div>
 </div>
 <div class="row">
-	<div class="grid_6">
-		<h2>Tag Cloud</h2>
-        <ul>
+	<div id="portfoliogroup" class="grid_6">
+		<h2>Portfolio</h2>
+        <ul id="portfolio">
         @foreach (var group in Model.tagCloud.SelectMany(p => p.ProjectTags).GroupBy(c => c.Tag))
         {
             if (group.FirstOrDefault().Tag.type == "medium")
             {
-            <li class="tag-@(group.Count() / 2)">@Html.ActionLink(group.FirstOrDefault().Tag.name + ": " + group.Count().ToString(), "Listing", new { id = group.FirstOrDefault().Tag.name })</li>
+            <li class="tag-@(group.Count() / 2)">@Html.ActionLink(group.FirstOrDefault().Tag.name, "Listing", new { id = group.FirstOrDefault().Tag.name })</li>
             }
         }
         </ul>
 	</div>
 	<div class="grid_6">
-		<h2>Featured Product</h2>
-        <ul>
-            <li>
-                <a href="/home/profile/@Model.featuredProduct.FirstOrDefault().alias" style="background-image:url('/images/portfolio/@Model.featuredProduct.FirstOrDefault().banner');">@Model.featuredProduct.FirstOrDefault().title</a>
-            </li>
-        </ul>
+        <a id="featuredproduct" href="/home/profile/@Model.featuredProduct.FirstOrDefault().alias" style="background-image:url('/images/portfolio/@Model.featuredProduct.FirstOrDefault().banner');">
+            <strong></strong>
+            <span>Featured Product : @Model.featuredProduct.FirstOrDefault().title</span>
+         </a>
 	</div>
 </div>
 <div class="row">
@@ -54,17 +52,17 @@
 	</div>
 </div>
 <div class="row base">
-	<div class="grid_3"><span class="example"><h2>Preferred Technologies</h2></span></div>
+	<div id="techgroup" class="grid_3"><h2>Preferred Technologies</h2></div>
 	<div id="newsgroup" class="grid_3">
 		<h2>News</h2>
 		<ul id="news" class="newsSlider rsDefault">
-			<li><a href="/">TitleHere 1</a></li>
-			<li><a href="/">TitleHere 2</a></li>
-			<li><a href="/">TitleHere 3</a></li>
-			<li><a href="/">TitleHere 4</a></li>
-			<li><a href="/">TitleHere 5</a></li>
-			<li><a href="/">TitleHere 6</a></li>
+			<li class="rsContent"><a href="/">TitleHere 1</a></li>
+			<li class="rsContent"><a href="/">TitleHere 2</a></li>
+			<li class="rsContent"><a href="/">TitleHere 3</a></li>
+			<li class="rsContent"><a href="/">TitleHere 4</a></li>
+			<li class="rsContent"><a href="/">TitleHere 5</a></li>
+			<li class="rsContent"><a href="/">TitleHere 6</a></li>
 		</ul>
 	</div>
-	<div class="grid_3"><h2>About</h2></div>
+	<div id="aboutgroup" class="grid_3"><h2>About</h2></div>
 </div>
