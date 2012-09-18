@@ -24,18 +24,14 @@
 	width: 100%;
     float: left;
     text-align: left;
-    margin-top: -309px;
     color: #EEE;
     background-color: black;
     position: relative;
     opacity: 0.8;
-    padding: 10px 0px;
 }
 
 .row div.rsGCaption figure
 {
-    padding-left:50px;
-    font-size:30px;
 	font-weight:bold;
 }
 
@@ -228,4 +224,40 @@
 #aboutgroup h2
 {
     margin:10px;
+}
+
+
+/*--------------------
+    Listing
+  --------------------*/
+
+#listing .project
+{
+    display:block;
+    float:left;
+    padding:5px;
+    height: 115px;
+    border: solid 1px #333;
+}
+
+#listing a.project
+{
+    text-decoration:none;
+}
+
+#listing a.project img
+{
+    float:left;
+    margin: 0px 5px 5px 0px;
+}
+
+#listing .project .title
+{
+    font-weight:bold;
+}
+
+#listing .project .view
+{
+    position:relative;
+    bottom: 0px;
 }

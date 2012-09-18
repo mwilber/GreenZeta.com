@@ -15,16 +15,18 @@
 
 
 <div class="row">
-@foreach (var item in Model.projects) {
-    <div class="project grid_3">
-        <a href="/home/profile/@item.alias">
-        <img src="/images/portfolio/@item.icon" width="64" height="64" />
-        @Html.DisplayFor(modelItem => item.title)
-        <br />
-        @Html.DisplayFor(modelItem => item.caption)
-        <br />
-        View
+    <div id="listing" class="grid_12">
+    @foreach (var item in Model.projects) {
+        @*<div class="project">*@
+        <a class="project" href="/home/profile/@item.alias">
+            <img src="/images/portfolio/@item.icon" width="64" height="64" />
+            <span class="title">@Html.DisplayFor(modelItem => item.title)</span>
+            <br />
+            @Html.DisplayFor(modelItem => item.caption)
+            <br />
+            <span class="view">View</span>
         </a>
+        @*</div>*@
+    }
     </div>
-}
 </div>

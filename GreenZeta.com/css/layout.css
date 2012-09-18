@@ -11,7 +11,10 @@
 .base											{ margin:0 auto; margin-bottom:40px; }	
 span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:#eee; text-align:center; width:100%; display:block; }
 
-
+#listing{ width: 960px; }
+#listing .project{ width: 290px; margin: 0px 12px 12px 0px; }
+.row div.rsGCaption { margin-top: -309px; padding: 10px 0px; }
+.row div.rsGCaption figure{ padding-left:50px; font-size:30px; }
 
 
 /***** Screen Bigger than 960px *****/
@@ -19,6 +22,10 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 
 .example										{ margin:0; padding:0; }
 
+#listing{ width: 1260px; }
+#listing .project{ width: 275px; margin: 0px 5px 12px 0px; }
+.row div.rsGCaption { margin-top: -387px; padding: 10px 0px; }
+.row div.rsGCaption figure{ padding-left:50px; font-size:30px; }
 }
 
 
@@ -28,6 +35,11 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 
 .example										{ margin:0; padding:0; }
 
+#listing{ width: 870px; }
+#listing .project{ width: 348px; margin: 0px 20px 20px 0px; }
+.row div.rsGCaption { margin-top: -247px; padding: 5px 0px; }
+.row div.rsGCaption figure{ padding-left: 40px; font-size: 25px; }
+
 }
 
 
@@ -36,6 +48,12 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 @media only screen and (max-width: 767px) {
 
 .example										{ margin:0; padding:0; }
+#listing{ width: 320px; }
+#listing .project{ width: 290px; margin: 0px 4px 8px 0px; }
+.row div.rsGCaption { margin-top: -100px; padding: 2px 0px; }
+.row div.rsGCaption figure{ padding-left: 30px; font-size: 11px; }
+.rsDefault .rsBullets { line-height: 8px; }
+.rsDefault .rsBullet { width: 6px; height: 6px; }
 
 }
 
@@ -45,6 +63,10 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	
 .example										{ margin:0; padding:0; }
+#listing{ width: 460px; }
+#listing .project{ width: 445px; margin: 0px 4px 8px 0px; }
+.row div.rsGCaption { margin-top: -152px; padding: 2px 0px; }
+.row div.rsGCaption figure{ padding-left: 30px; font-size: 15px; }
 
 }
 
