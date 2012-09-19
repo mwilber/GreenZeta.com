@@ -21,7 +21,7 @@
 <div class="row">
 	<div id="portfoliogroup" class="grid_6">
 		<h2>Portfolio</h2>
-        <ul id="portfolio">
+        <ul id="portfolio" class="taglist">
         @foreach (var group in Model.tagCloud.SelectMany(p => p.ProjectTags).GroupBy(c => c.Tag))
         {
             if (group.FirstOrDefault().Tag.type == "medium")

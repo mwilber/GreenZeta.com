@@ -6,48 +6,66 @@
     ViewBag.BodyClass = "profile";
     Layout = "~/Views/Shared/_LayoutGZ.cshtml";
 }
+<div class="row" style="overflow: visible;">
+    <div id="banner" class="grid_12" style="background-image:url('/images/portfolio/@Model.FirstOrDefault().banner');">
+        <img src="/images/portfolio/@Model.FirstOrDefault().icon" width="128" height="128" />
+    </div>
+</div>
+
 <div class="row">
-<div id="banner" style="background-image:url('/images/portfolio/@Model.FirstOrDefault().banner');">
-    <img src="/images/portfolio/@Model.FirstOrDefault().icon" width="128" height="128" />
-</div></div>
-<a id="btn_home" href="/">Home</a>
-<h2 id="title">@Model.FirstOrDefault().title</h2>
-<div id="clientgroup">
-<h3>Client</h3>
-<ul>
-@foreach (var item in Model.FirstOrDefault().ProjectTags)
-{
-    if (item.Tag.type == "client")
-    {
-    <li>
-        @Html.ActionLink(item.Tag.name, "Listing", new { id = item.Tag.name })
-    </li>
-    }
-}
-</ul>
+    <div class="grid_12">
+        <a id="btn_home" href="/">Home</a>
+        <h2 id="title">@Model.FirstOrDefault().title</h2>
+
+        <div id="clientgroup">
+            <h3>Client</h3>
+            <ul id="clients" class="taglist">
+            @foreach (var item in Model.FirstOrDefault().ProjectTags)
+            {
+                if (item.Tag.type == "client")
+                {
+                <li>
+                    @Html.ActionLink(item.Tag.name, "Listing", new { id = item.Tag.name })
+                </li>
+                }
+            }
+            </ul>
+        </div>
+        <div id="taggroup">
+            <h3>Tags</h3>
+            <ul id="portfolio" class="taglist">
+            @foreach (var item in Model.FirstOrDefault().ProjectTags)
+            {
+                if (item.Tag.type == "medium")
+                {
+                <li>
+                    @Html.ActionLink(item.Tag.name, "Listing", new { id = item.Tag.name })
+                </li>
+                }
+            }
+            </ul>
+        </div>
+
+    </div>
 </div>
-<div id="taggroup">
-<h3>Tags</h3>
-<ul>
-@foreach (var item in Model.FirstOrDefault().ProjectTags)
-{
-    if (item.Tag.type == "medium")
-    {
-    <li>
-        @Html.ActionLink(item.Tag.name, "Listing", new { id = item.Tag.name })
-    </li>
-    }
-}
-</ul>
+
+<div class="row">
+    <div class="grid_2">&nbsp;</div>
+    <div id="screengroup" class="grid_8">
+
+        <div id="gallery-1" class="royalSlider rsDefault fwImage col span_4">
+        @foreach (var item in Model.FirstOrDefault().ScreenShots)
+        {
+            <a class="rsImg"  data-rsDelay="1000" data-rsBigImg="/images/portfolio/@item.url" href="/images/portfolio/@item.url">@item.caption<img width="96" height="96" class="rsTmb" src="/image?p=@item.url&w=96" /></a>
+        }
+        </div>
+
+    </div>
+    <div class="grid_2"></div>
 </div>
-<div id="screengroup">
-<h3>Screen Shots</h3>
-<ul>
-@foreach (var item in Model.FirstOrDefault().ScreenShots)
-{
-    <li>
-        <a href="/images/portfolio/@Html.DisplayFor(modelItem => item.url)" style="display:block; width:150px; height:150px; background-image:url('/image?p=@Html.DisplayFor(modelItem => item.url)&w=150');"></a>
-    </li>
-}
-</ul>
-</div>
+
+
+
+
+
+
