@@ -116,6 +116,13 @@
     <Content Include="css\layout.css" />
     <Content Include="css\style.css" />
     <Content Include="Global.asax" />
+    <Content Include="images\grass_texture_tile.jpg" />
+    <Content Include="images\grass_texture_xl.jpg" />
+    <Content Include="images\head_grass.png" />
+    <Content Include="images\head_highgrass_a.png" />
+    <Content Include="images\head_highgrass_b.png" />
+    <Content Include="images\head_stars.png" />
+    <Content Include="images\head_zeta.png" />
     <Content Include="js\libs\jquery.easing.1.3.js" />
     <Content Include="js\libs\jquery.ui.totop.js" />
     <Content Include="js\script.js" />
@@ -293,7 +300,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\portfolio\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

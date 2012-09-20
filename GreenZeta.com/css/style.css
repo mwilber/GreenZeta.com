@@ -1,3 +1,8 @@
+body
+{
+    margin-top:0px;
+}
+
 .row
 {
     margin-bottom:10px;
@@ -7,6 +12,27 @@
 	/*background-color: #eee;*/
 	padding: 0px;
 	/*margin-bottom:10px;*/
+}
+
+
+#main{
+	background: #000 url('../images/grass_texture_tile.jpg') repeat left top;
+}
+
+#gradient
+{
+	
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4yIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC45NSIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CiAgPHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.95) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0.2)), color-stop(100%,rgba(0,0,0,0.95))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.95) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.95) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.95) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.95) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#f2000000',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+	background-position: center -300px;
 }
 
 
@@ -26,7 +52,7 @@
 	position:absolute;
 	top:0px;
 	left:50%;
-	margin-left:-600px;
+	margin-left:-580px;
 }
 
 .layer, #hga, #hgb{
@@ -34,7 +60,7 @@
 	-o-transition: background-position .5s linear;
 	-moz-transition: background-position .5s linear;
 	-webkit-transition: background-position .5s linear;
-}
+}                                        
 
 #header #stars{
 	background: #000 url('../images/head_stars.png') no-repeat -50px 0px;
@@ -55,7 +81,9 @@
 	width:40%;
 	top:0px;
 	left:0px;
-	background: transparent url('../images/head_highgrass_a.png') no-repeat -50px 0px;
+	margin-left: -50px;
+	background: transparent url('../images/head_highgrass_a.png') no-repeat -20px 0px;
+	/*border:solid 1px #f00;*/
 }
 
 #header #highgrass #hgb{
@@ -64,7 +92,21 @@
 	width:40%;
 	top:0px;
 	right:0px;
-	background: transparent url('../images/head_highgrass_b.png') no-repeat left 0px;
+	margin-right: 100px;
+	background: transparent url('../images/head_highgrass_b.png') no-repeat -150px 0px;
+	/*border:solid 1px #f00;*/
+}
+
+#header #btn_home
+{
+    display:block;
+    position:absolute;
+    bottom:20px;
+    right:20px;
+    width:30px;
+    height:30px;
+    background: #000;
+    color:#fff;
 }
 
 
@@ -100,6 +142,7 @@
 #portfoliogroup
 {
     background-color:#333;
+    background-color:rgba(175, 175, 175, 0.4);
     height:250px;
 }
 
@@ -192,6 +235,7 @@
 	overflow-y:hidden;
 	overflow-x:scroll;
 	background-color:#333;
+	background-color:rgba(75, 75, 75, 0.4);
 }
 
 #productsgroup h2
