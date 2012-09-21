@@ -17,13 +17,13 @@
         <h2 id="title">@Model.FirstOrDefault().title</h2>
 
         <div id="clientgroup">
-            <h3>Client</h3>
+            <h3>Client: </h3>
             <ul id="clients" class="taglist">
             @foreach (var item in Model.FirstOrDefault().ProjectTags)
             {
                 if (item.Tag.type == "client")
                 {
-                <li>
+                <li class="tag-1 arrow_box">
                     @Html.ActionLink(item.Tag.name, "Listing", new { id = item.Tag.name })
                 </li>
                 }
@@ -31,13 +31,13 @@
             </ul>
         </div>
         <div id="taggroup">
-            <h3>Tags</h3>
+            <h3>Medium: </h3>
             <ul id="portfolio" class="taglist">
             @foreach (var item in Model.FirstOrDefault().ProjectTags)
             {
                 if (item.Tag.type == "medium")
                 {
-                <li>
+                <li class="tag-1 arrow_box">
                     @Html.ActionLink(item.Tag.name, "Listing", new { id = item.Tag.name })
                 </li>
                 }

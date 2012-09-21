@@ -14,9 +14,65 @@ body
 	/*margin-bottom:10px;*/
 }
 
+.glass {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#1affffff');	
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .2)), color-stop(50%, rgba(255, 255, 255, .1)), color-stop(50%, rgba(0, 0, 0, .2)), to(rgba(255, 255, 255, .1)));			
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, .2), rgba(255, 255, 255, .1) 50%, rgba(0, 0, 0, .2) 50%, rgba(255, 255, 255, .1));					
+}		
+			
+.glass-a {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#1a000000');			
+	background: -webkit-gradient(linear, 48% top, 52% bottom, from(rgba(255, 255, 255, .5)), color-stop(50%, rgba(255, 255, 255, .2)), color-stop(50%, rgba(0, 0, 0, .2)), to(rgba(255, 255, 255, .1)));
+	background: -moz-linear-gradient(-80deg, rgba(255, 255, 255, .5), rgba(255, 255, 255, .2) 50%, rgba(0, 0, 0, .2) 50%, rgba(255, 255, 255, .1));		
+}
+
+.roundcorners 
+{
+    border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+}
+
+.arrow_box {
+	position: relative;
+	background: #d1bb9d;
+	border: 1px solid #4f3e21;
+}
+.arrow_box:after, .arrow_box:before {
+	right: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(209, 187, 157, 0);
+	border-right-color: #d1bb9d;
+	border-width: 13px;
+	top: 50%;
+	margin-top: -13px;
+}
+.arrow_box:before {
+	border-color: rgba(79, 62, 33, 0);
+	border-right-color: #4f3e21;
+	border-width: 14px;
+	top: 50%;
+	margin-top: -14px;
+}
+
+#maingroup
+{
+    margin-bottom:0px;
+}
 
 #main{
 	background: #000 url('../images/grass_texture_tile.jpg') repeat left top;
+	border-left: solid 1px #999;
+	border-right: solid 1px #999;
+	border-top: solid 1px #999;
 }
 
 #gradient
@@ -40,10 +96,17 @@ body
     Header 
   --------------------*/
 
+#headergroup
+{
+    margin-bottom:0px;
+}
+
 #header{
 	height:100px;
 	position:relative;
 	overflow:hidden;
+	border-left: solid 1px #999;
+	border-right: solid 1px #999;
 }
 
 #header .layer{
@@ -141,14 +204,17 @@ body
 
 #portfoliogroup
 {
-    background-color:#333;
-    background-color:rgba(175, 175, 175, 0.4);
-    height:250px;
+    /*background-color:#333;*/
+    background-color:rgba(242, 232, 213, 0.4);
+    height: 250px;
+    margin: 20px;
 }
 
 #portfoliogroup h2
 {
-    margin:10px;
+    padding: 10px 0px 0px 20px;
+    color:#4f3e21;
+    font-weight: bold;
 }
 
 #portfoliogroup #portfolio
@@ -160,13 +226,13 @@ body
 .taglist li
 {
     float:left;
-    margin:5px;
+    margin:0px 0px 10px 20px;
     padding:2px 5px;
-    background:#ccc none;
-    color:#333;
+    background:#d1be9d none;
+    color:#4f3e21;
     font-size:10px;
     display: block;
-    height: 20px;
+    height: 22px;
 }
 
 .taglist li.tag-1
@@ -199,6 +265,7 @@ body
 {
     width: 100%;
     height: 250px;
+    margin: 20px 0px 0px -20px;
     display: block;
     background-position: center center;
     text-decoration:none;
@@ -216,7 +283,7 @@ body
 #featuredproduct span
 {
     display: block;
-    margin: 135px 0px 0px 0px;
+    margin: 155px 0px 0px 0px;
     padding: 5px 20px;
     min-height: 45px;
     text-align: right;
@@ -234,13 +301,17 @@ body
 #productsgroup{
 	overflow-y:hidden;
 	overflow-x:scroll;
-	background-color:#333;
-	background-color:rgba(75, 75, 75, 0.4);
+	margin: 0px 20px 20px 20px;
+	/*background-color:#333;
+	background-color:rgba(75, 75, 75, 0.4);*/
 }
 
 #productsgroup h2
 {
-    margin:10px;
+    margin:5px 15px 0px 10px;
+    padding: 10px 0px 0px 20px;
+    color:#006;
+    font-weight:bold;
 }
 
 #products{
@@ -256,6 +327,12 @@ body
 	width:130px;
 }
 
+#products li a img
+{
+    height:96px;
+    width:96px;
+}
+
 
 /*--------------------
     Tech
@@ -263,8 +340,9 @@ body
 
 #techgroup{
 	overflow:hidden;
-	background-color:#333;
+	background-color:rgba(0, 0, 0, 0.8);
 	height: 250px;
+	margin: 0px 0px 20px 20px;
 }
 
 #techgroup h2
@@ -279,8 +357,9 @@ body
 
 #newsgroup{
 	overflow:hidden;
-	background-color:#333;
+	background-color:rgba(0, 0, 0, 0.8);
 	height: 250px;
+	margin: 0px 0px 0px 0px;
 }
 
 #newsgroup h2
@@ -300,8 +379,8 @@ body
 #news li a
 {
     display:block;
-    width: 210px;
-	height: 190px;
+    width: 288px;
+    height: 195px;
     color:#000;
     background-color: #FEE;
     text-align: center;
@@ -319,8 +398,9 @@ body
 
 #aboutgroup{
 	overflow:hidden;
-	background-color:#333;
+	background-color:rgba(0, 0, 0, 0.8);
 	height: 250px;
+	margin: 0px 20px 20px 0px;
 }
 
 #aboutgroup h2
@@ -376,12 +456,24 @@ body
       background-position:center center;
   }
   
+  #title
+  {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 40px;
+    padding: 10px 0px 5px 30px;
+    margin-top: -58px;
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    font-weight:bold;
+  }
+  
   #banner img
   {
       border: solid 10px #fff;
       background-color:#fff;
       float:right;
-      margin: 50px 50px 0px 0px;
+      margin: 40px 50px 0px 0px;
       position:relative;
       z-index:100;
   }
@@ -390,6 +482,7 @@ body
   {
       float:left;
       clear:both;
-      margin-right:15px;
-      font-size:14px;
+      margin:0px 15px;
+      font-size:18px;
+      width:70px;
   }

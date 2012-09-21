@@ -19,41 +19,52 @@
 	</div>
 </div>
 <div class="row">
-	<div id="portfoliogroup" class="grid_6">
+	<div class="grid_6">
+        <div id="portfoliogroup" class="glass-a roundcorners">
 		<h2>Portfolio</h2>
         <ul id="portfolio" class="taglist">
         @foreach (var group in Model.tagCloud.SelectMany(p => p.ProjectTags).GroupBy(c => c.Tag))
         {
             if (group.FirstOrDefault().Tag.type == "medium")
             {
-            <li class="tag-@(group.Count() / 2)">@Html.ActionLink(group.FirstOrDefault().Tag.name, "Listing", new { id = group.FirstOrDefault().Tag.name })</li>
+            <li class="tag-@(group.Count() / 2) arrow_box">@Html.ActionLink(group.FirstOrDefault().Tag.name, "Listing", new { id = group.FirstOrDefault().Tag.name })</li>
             }
         }
         </ul>
+        </div>
 	</div>
 	<div class="grid_6">
-        <a id="featuredproduct" href="/home/profile/@Model.featuredProduct.FirstOrDefault().alias" style="background-image:url('/images/portfolio/@Model.featuredProduct.FirstOrDefault().banner');">
-            <strong></strong>
-            <span>Featured Product : @Model.featuredProduct.FirstOrDefault().title</span>
-         </a>
+        <div>
+            <a id="featuredproduct" href="/home/profile/@Model.featuredProduct.FirstOrDefault().alias" style="background-image:url('/images/portfolio/@Model.featuredProduct.FirstOrDefault().banner');">
+                <strong></strong>
+                <span>Featured Product : @Model.featuredProduct.FirstOrDefault().title</span>
+            </a>
+         </div>
 	</div>
 </div>
 <div class="row">
-	<div id="productsgroup" class="grid_12">
-		<h2>Products</h2>
-		<ul id="products">
-        @foreach (var item in Model.Products)
-        {
-            <li>
-                <a href="/home/profile/@item.alias"><img src="/images/portfolio/@item.icon" /><br />@item.title</a>
-            </li>
-        }
-        </ul>
+	<div class="grid_12">
+        <div id="productsgroup" class="glass-a roundcorners">
+		    <h2>Products</h2>
+		    <ul id="products">
+            @foreach (var item in Model.Products)
+            {
+                <li>
+                    <a href="/home/profile/@item.alias"><img src="/images/portfolio/@item.icon" /><br />@item.title</a>
+                </li>
+            }
+            </ul>
+        </div>
 	</div>
 </div>
 <div class="row base">
-	<div id="techgroup" class="grid_3"><h2>Preferred Technologies</h2></div>
-	<div id="newsgroup" class="grid_3">
+	<div class="grid_4">
+        <div id="techgroup" class="glass roundcorners">
+        <h2>Preferred Technologies</h2>
+        </div>
+    </div>
+	<div class="grid_4">
+        <div id="newsgroup" class="glass roundcorners">
 		<h2>News</h2>
 		<ul id="news" class="newsSlider rsDefault">
 			<li class="rsContent"><a href="/">TitleHere 1</a></li>
@@ -63,6 +74,11 @@
 			<li class="rsContent"><a href="/">TitleHere 5</a></li>
 			<li class="rsContent"><a href="/">TitleHere 6</a></li>
 		</ul>
+        </div>
 	</div>
-	<div id="aboutgroup" class="grid_3"><h2>About</h2></div>
+	<div class="grid_4">
+        <div id="aboutgroup" class="glass roundcorners">
+        <h2>About</h2>
+        </div>
+    </div>
 </div>
