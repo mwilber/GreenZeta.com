@@ -12,9 +12,24 @@
 span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:#eee; text-align:center; width:100%; display:block; }
 
 #listing{ width: 960px; }
-#listing .project{ width: 290px; margin: 0px 12px 12px 0px; }
-.row div.rsGCaption { margin-top: -309px; padding: 10px 0px; }
+#listing .project{ width: 284px; margin: 0px 0px 10px 10px; }
+.row div.rsGCaption { margin-top: -73px; padding: 10px 0px; }
 .row div.rsGCaption figure{ padding-left:50px; font-size:30px; }
+#featuredproduct{ width:425px; height: 250px; margin: 20px 0px 0px 0px; }
+#newsgroup{  margin: 0px 0px 0px 20px; }
+#aboutgroup{ margin: 0px 20px 20px 0px; }
+#main.grid_12{margin:0px; margin-top:-3px;}
+#maingroup.row{width:930px;}
+#aboutgroup .col1{ width:300px; }
+#aboutgroup .col2{ width:220px; }
+#news li .postlink{ width:170px; font-size:14px; }
+
+#title {
+	padding: 10px 0px 5px 30px;
+	top: 206px;
+	width: 900px;
+}
+
 
 
 /***** Screen Bigger than 960px *****/
@@ -23,9 +38,18 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 .example										{ margin:0; padding:0; }
 
 #listing{ width: 1260px; }
-#listing .project{ width: 275px; margin: 0px 5px 12px 0px; }
-.row div.rsGCaption { margin-top: -387px; padding: 10px 0px; }
+#listing .project{ width: 265px; margin: 0px 0px 10px 10px; }
+.row div.rsGCaption { margin-top: -73px; padding: 10px 0px; }
 .row div.rsGCaption figure{ padding-left:50px; font-size:30px; }
+#featuredproduct{ width:535px; height: 250px; }
+#maingroup.row{width:1160px;}
+
+#title {
+	padding: 10px 0px 5px 30px;
+	top: 206px;
+	width: 1130px;
+}
+
 }
 
 
@@ -36,9 +60,21 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 .example										{ margin:0; padding:0; }
 
 #listing{ width: 870px; }
-#listing .project{ width: 348px; margin: 0px 20px 20px 0px; }
-.row div.rsGCaption { margin-top: -247px; padding: 5px 0px; }
+#listing .project{ width: 342px; margin: 0px 0px 10px 10px; }
+.row div.rsGCaption { margin-top: -57px; padding: 5px 0px; }
 .row div.rsGCaption figure{ padding-left: 40px; font-size: 25px; }
+#featuredproduct{ width:335px; height: 250px; }
+#featured{margin-top:0px;}
+#maingroup.row{width:741px;}
+#aboutgroup .col1{ width:270px; }
+#aboutgroup .col2{ width:140px; }
+#news li .postlink{ width:120px; font-size:12px; }
+
+#title {
+	padding: 10px 0px 5px 30px;
+	top: 206px;
+	width: 711px;
+}
 
 }
 
@@ -49,12 +85,27 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 
 .example										{ margin:0; padding:0; }
 #listing{ width: 320px; }
-#listing .project{ width: 290px; margin: 0px 4px 8px 0px; }
-.row div.rsGCaption { margin-top: -100px; padding: 2px 0px; }
+#listing .project{ width: 265px; margin: 0px 0px 10px 10px; }
+.row div.rsGCaption { margin-top: -25px; padding: 2px 0px; }
 .row div.rsGCaption figure{ padding-left: 30px; font-size: 11px; }
 .rsDefault .rsBullets { line-height: 8px; }
 .rsDefault .rsBullet { width: 6px; height: 6px; }
+#featuredproduct{ width:260px; height: 250px; margin-left:20px; margin-top:0px; margin-bottom: 20px; }
+#newsgroup{ width:260px; margin: 0px 0px 20px 20px; }
+#aboutgroup{ width:260px; margin: 0px 0px 20px 20px; }
+#maingroup.row{width:300px;}
+#aboutgroup .col1{ width:220px; }
+#aboutgroup .col2{ width:220px; }
 
+#banner img{ display:none; }
+
+#title{
+	padding: 10px 0px 5px 15px;
+	margin-top: 0px;
+	top: 112px;
+	width: 285px;
+}
+	
 }
 
 
@@ -64,10 +115,26 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 	
 .example										{ margin:0; padding:0; }
 #listing{ width: 460px; }
-#listing .project{ width: 445px; margin: 0px 4px 8px 0px; }
-.row div.rsGCaption { margin-top: -152px; padding: 2px 0px; }
+#listing .project{ width: 422px; margin: 0px 0px 10px 10px; }
+.row div.rsGCaption { margin-top: -29px; padding: 2px 0px; }
 .row div.rsGCaption figure{ padding-left: 30px; font-size: 15px; }
+#featuredproduct{ width:415px; height: 300px; margin-left:20px; margin-top:0px; margin-bottom: 20px; }
 
+#newsgroup{ width:415px; margin: 0px 0px 20px 20px; }
+#aboutgroup{ width:415px; margin: 0px 0px 20px 20px; }
+#maingroup.row{width:456px;}
+#aboutgroup .col1{ width:370px; }
+#aboutgroup .col2{ width:370px; }
+
+#title{
+	padding: 10px 0px 5px 15px;
+	margin-top: 0px;
+	position: absolute;
+	z-index: 50;
+	font-weight: bold;
+	top: 112px;
+	width: 441px;
+}
 }
 
 

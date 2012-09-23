@@ -10,27 +10,19 @@ $(document).ready( function($){
         // as an example, enable keyboard arrows nav
         keyboardNavEnabled: true,
         autoScaleSlider: true,
-        autoScaleSliderWidth: 1200,
+        autoScaleSliderWidth: 900,
         autoScaleSliderHeight: 400,
         imageScaleMode: 'fill',
         globalCaption: true,
-        loopRewind: false,
+        loop: true,
         autoPlay: {
             // autoplay options go gere
-            enabled: false,
+            enabled: true,
             pauseOnHover: true,
             delay: 3000
         }
     });
-    $(".index .newsSlider").royalSlider({
-        // options go here
-        // as an example, enable keyboard arrows nav
-        keyboardNavEnabled: true,
-        autoScaleSlider: true,
-        autoScaleSliderWidth: 210,
-        autoScaleSliderHeight: 190,
-        imageScaleMode: 'fill'
-    });
+
     $('#gallery-1').royalSlider({
         fullscreen: {
             enabled: true,
@@ -40,16 +32,37 @@ $(document).ready( function($){
         autoScaleSlider: true,
         autoScaleSliderWidth: 960,
         autoScaleSliderHeight: 850,
-        loop: false,
+        loop: true,
         numImagesToPreload: 4,
         arrowsNavAutohide: true,
         arrowsNavHideOnTouch: true,
-        keyboardNavEnabled: true
+        keyboardNavEnabled: true,
+        globalCaption: true,
     });
 
     $('#hga').mouseenter(HeadLeft).mouseleave(HeadReset).bind('touchstart', HeadLeft).bind('touchend', HeadReset);
 
     $('#hgb').mouseenter(HeadRight).mouseleave(HeadReset).bind('touchstart', HeadRight).bind('touchend', HeadReset);
+    
+    // Set up the news feed
+    $(".newsSlider").facebookfeed(
+	{
+		id:'102352989996', 
+		access_token:'AAAB2vGwl0cMBAGh6MoMnIMy57DKyzxJjuad0OV6eRTerg7Usxz9HitxDZBvMErV4EVaPmkEHELRPC2zMzS7lNgCdPvKgfUgCr6A0jnQZDZD',
+		query:{limit:6}
+	},
+	function(){
+		$(".index .newsSlider").royalSlider({
+	        // options go here
+	        // as an example, enable keyboard arrows nav
+	        keyboardNavEnabled: true,
+	        autoScaleSlider: true,
+	        autoScaleSliderWidth: 60,
+       		autoScaleSliderHeight: 50,
+	        imageScaleMode: 'fill',
+	        loop: true,
+	    });
+	});
 	
 } );
 

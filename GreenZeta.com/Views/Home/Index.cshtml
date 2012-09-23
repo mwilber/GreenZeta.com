@@ -27,10 +27,11 @@
         {
             if (group.FirstOrDefault().Tag.type == "medium")
             {
-            <li class="tag-@(group.Count() / 2) arrow_box">@Html.ActionLink(group.FirstOrDefault().Tag.name, "Listing", new { id = group.FirstOrDefault().Tag.name })</li>
+            <li class="tag-@(group.Count() / 3) arrow_box">@Html.ActionLink(group.FirstOrDefault().Tag.name, "Listing", new { id = group.FirstOrDefault().Tag.name })</li>
             }
         }
         </ul>
+        <div style="clear:both;"></div>
         </div>
 	</div>
 	<div class="grid_6">
@@ -45,7 +46,8 @@
 <div class="row">
 	<div class="grid_12">
         <div id="productsgroup" class="glass-a roundcorners">
-		    <h2>Products</h2>
+		    <a href="/Home/Listing/Product"><h2>Products</h2></a>
+		    <div id="productsblock">
 		    <ul id="products">
             @foreach (var item in Model.Products)
             {
@@ -54,31 +56,48 @@
                 </li>
             }
             </ul>
+            </div>
         </div>
 	</div>
 </div>
 <div class="row base">
 	<div class="grid_4">
-        <div id="techgroup" class="glass roundcorners">
-        <h2>Preferred Technologies</h2>
-        </div>
-    </div>
-	<div class="grid_4">
         <div id="newsgroup" class="glass roundcorners">
 		<h2>News</h2>
 		<ul id="news" class="newsSlider rsDefault">
-			<li class="rsContent"><a href="/">TitleHere 1</a></li>
-			<li class="rsContent"><a href="/">TitleHere 2</a></li>
-			<li class="rsContent"><a href="/">TitleHere 3</a></li>
-			<li class="rsContent"><a href="/">TitleHere 4</a></li>
-			<li class="rsContent"><a href="/">TitleHere 5</a></li>
-			<li class="rsContent"><a href="/">TitleHere 6</a></li>
 		</ul>
         </div>
 	</div>
-	<div class="grid_4">
+	<div class="grid_8">
         <div id="aboutgroup" class="glass roundcorners">
         <h2>About</h2>
+        	<div class="col1">
+	        	<p>GreenZeta is the portfolio of internet software developer Matthew Wilber.</p>
+	            <ul>
+	                <li>Server side applications with PHP or ASP.Net</li>
+	                <li>Client side applications with HTML5 and AJAX</li>
+	                <li>Web page design &amp; programming</li>
+	                <li>Serach Engine Optomized HTML</li>
+	                <li>facebook apps</li>
+	                <li>WordPress templates</li>
+	            </ul>
+	    	</div>
+	    	<div class="col2">
+	            <ul>
+	                <li><a href="mailto:info@greenzeta.com">info@greenzeta.com</a></li>
+	                <li class="social">
+	                	<a href="http://www.linkedin.com/in/mwilber" target="_blank">
+	                		<img src="/images/linkedin.png"/>
+	                	</a>
+	                	<a href="https://plus.google.com/117175183804932889480/about" target="_blank">
+	                		<img src="/images/gplus.png"/>
+	                	</a>
+	                	<a href="http://www.facebook.com/greenzeta" target="_blank">
+	                		<img src="/images/facebook.png"/>
+	                	</a>
+	                </li>
+	            </ul>
+	    	</div>
         </div>
     </div>
 </div>
