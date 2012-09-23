@@ -169,13 +169,91 @@ body
     right:20px;
     background: #000;
     background: rgba(0,0,0,0.3);
-    border:solid 1px #999;
+    border:solid 2px #999;
     color:#fff;
 }
 
 #header #btn_home img{
 	width:35px;
 	height:35px;
+}
+
+#menu
+{
+    position:absolute;
+    top:100px;
+    left:50%;
+    margin-left:254px;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.9);
+    z-index:500;
+    padding:20px;
+    border:solid 5px #999;
+    display:none;
+    transition: all .5s linear;
+	-o-transition: all .5s linear;
+	-moz-transition: all .5s linear;
+	-webkit-transition: all .5s linear;
+}
+
+#menu ul
+{
+    margin:0px;
+}
+
+#menu li
+{
+    background: transparent none;
+    border-bottom: solid 1px #666;
+}
+
+#menu li a
+{
+    display:block;
+    width:140px;
+    height:25px;
+    color:#ccc;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:900;
+    padding:3px 0px 0px 10px;
+}
+#menu li a:hover
+{
+    background: rgba(255,255,255,0.6);
+    color:#333;
+}
+
+.arrow_box_black {
+	background: #000;
+	border: 5px solid #999;
+	z-index:500;
+}
+.arrow_box_black:after, .arrow_box_black:before {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	z-index:500;
+}
+
+.arrow_box_black:after {
+	border-color: rgba(0, 0, 0, 0);
+	border-bottom-color: #000;
+	border-width: 16px;
+	left: 50%;
+	margin-left: 54px;
+}
+.arrow_box_black:before {
+	border-color: rgba(153, 153, 153, 0);
+	border-bottom-color: #999;
+	border-width: 24px;
+	left: 50%;
+	margin-left: 46px;
+	z-index:500;
 }
 
 
@@ -224,7 +302,7 @@ body
     font-weight: bold;
 }
 
-#portfoliogroup #portfolio
+#portfoliogroup #portfoliob
 {
     list-style:none;
     margin:10px;
@@ -344,12 +422,12 @@ body
 	overflow-x:scroll;
 }
 
-#products{
+#productsb{
 	list-style:none;
 	width:1500px;
 }
 
-#products li{
+#productsb li{
 	background:none;
 	float:left;
 	margin: 10px 20px;
@@ -357,7 +435,7 @@ body
 	width:130px;
 }
 
-#products li a img
+#productsb li a img
 {
     height:96px;
     width:96px;

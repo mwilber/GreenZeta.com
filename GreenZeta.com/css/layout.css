@@ -105,6 +105,10 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 	top: 112px;
 	width: 285px;
 }
+
+#descriptiongroup{ margin: 0px 20px 20px 20px; }
+#socialgroup{ margin: -5px 10px 20px 20px; }
+#socialgroup div{ clear:both; margin-top:20px; }
 	
 }
 
@@ -135,6 +139,12 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 	top: 112px;
 	width: 441px;
 }
+
+#descriptiongroup{ margin: 0px 20px 20px 20px; }
+#socialgroup{ margin: -5px 10px 20px 20px; }
+
+#socialgroup div{ clear:both; margin-top:20px; }
+
 }
 
 

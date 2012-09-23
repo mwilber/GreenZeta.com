@@ -15,7 +15,7 @@
 
 <div class="row">
     <div id="listing" class="grid_12">
-    @foreach (var item in Model.projects) {
+    @foreach (var item in Model.projects.OrderByDescending(s => s.launchDate)) {
         @*<div class="project">*@
         <a class="project glass roundcorners" href="/home/profile/@item.alias">
             <img src="/images/portfolio/@item.icon" width="64" height="64" />

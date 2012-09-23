@@ -48,7 +48,7 @@
         	@if( @Model.FirstOrDefault().link != null ){
         		<a id="clientlink" class="glass roundcorners" href="@Model.FirstOrDefault().link" target="_blank">Live Site</a>
         	}
-        	<div style="float:right;">
+        	<div style="float:right; width: 280px;">
 	        	<script src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share"></script>
 	        	&nbsp;&nbsp;
 	        	<script>function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script><style> html .fb_share_button { display: -moz-inline-block; display:inline-block; padding:1px 20px 0 5px; width:35px; height:20px; border:none; background:url(/images/fbshare.png) no-repeat top right; } </style> <a rel="nofollow" href="http://www.facebook.com/share.php?u=<;url>" class="fb_share_button" onclick="return fbs_click()" target="_blank" style="text-decoration:none;"></a>

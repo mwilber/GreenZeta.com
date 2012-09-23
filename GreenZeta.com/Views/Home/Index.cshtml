@@ -20,9 +20,10 @@
 </div>
 <div class="row">
 	<div class="grid_6">
+        <a name="portfolio"></a>
         <div id="portfoliogroup" class="glass-a roundcorners">
 		<h2>Portfolio</h2>
-        <ul id="portfolio" class="taglist">
+        <ul id="portfoliob" class="taglist">
         @foreach (var group in Model.tagCloud.SelectMany(p => p.ProjectTags).GroupBy(c => c.Tag))
         {
             if (group.FirstOrDefault().Tag.type == "medium")
@@ -45,11 +46,12 @@
 </div>
 <div class="row">
 	<div class="grid_12">
+        <a name="products"></a>
         <div id="productsgroup" class="glass-a roundcorners">
 		    <a href="/Home/Listing/Product"><h2>Products</h2></a>
 		    <div id="productsblock">
-		    <ul id="products">
-            @foreach (var item in Model.Products)
+		    <ul id="productsb">
+            @foreach (var item in Model.Products.OrderByDescending(s => s.launchDate))
             {
                 <li>
                     <a href="/home/profile/@item.alias"><img src="/images/portfolio/@item.icon" /><br />@item.title</a>
@@ -62,6 +64,7 @@
 </div>
 <div class="row base">
 	<div class="grid_4">
+        <a name="news"></a>
         <div id="newsgroup" class="glass roundcorners">
 		<h2>News</h2>
 		<ul id="news" class="newsSlider rsDefault">
@@ -69,6 +72,7 @@
         </div>
 	</div>
 	<div class="grid_8">
+        <a name="about"></a>
         <div id="aboutgroup" class="glass roundcorners">
         <h2>About</h2>
         	<div class="col1">

@@ -43,6 +43,13 @@ $(document).ready( function($){
     $('#hga').mouseenter(HeadLeft).mouseleave(HeadReset).bind('touchstart', HeadLeft).bind('touchend', HeadReset);
 
     $('#hgb').mouseenter(HeadRight).mouseleave(HeadReset).bind('touchstart', HeadRight).bind('touchend', HeadReset);
+
+    $('#btn_home').click(
+        function(){
+            $('#menu').toggle(); 
+            return false;
+        }
+    );
     
     // Set up the news feed
     $(".newsSlider").facebookfeed(
