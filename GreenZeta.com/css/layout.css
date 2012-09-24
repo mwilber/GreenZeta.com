@@ -30,6 +30,9 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 	width: 900px;
 }
 
+#zeta{display:none;}
+
+
 
 
 /***** Screen Bigger than 960px *****/
@@ -49,6 +52,14 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 	top: 206px;
 	width: 1130px;
 }
+
+#menu{ margin-left:370px; }
+
+.index #zeta{ position:absolute; z-index:500; display:block; top: 1030px; left: 50%; margin-left: 492px;}
+#aboutgroup .github{
+	width:100%;
+}
+
 
 }
 
@@ -75,6 +86,11 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 	top: 206px;
 	width: 711px;
 }
+#menu{ margin-left:160px; }
+#aboutgroup .github{
+	width: 300px;
+}
+
 
 }
 
@@ -105,10 +121,15 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 	top: 112px;
 	width: 285px;
 }
+#menu{ margin-left:-59px; }
 
 #descriptiongroup{ margin: 0px 20px 20px 20px; }
 #socialgroup{ margin: -5px 10px 20px 20px; }
 #socialgroup div{ clear:both; margin-top:20px; }
+#aboutgroup .github{
+	width:100%;
+}
+
 	
 }
 
@@ -139,11 +160,16 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 	top: 112px;
 	width: 441px;
 }
+#menu{ margin-left:19px; }
 
 #descriptiongroup{ margin: 0px 20px 20px 20px; }
 #socialgroup{ margin: -5px 10px 20px 20px; }
 
 #socialgroup div{ clear:both; margin-top:20px; }
+#aboutgroup .github{
+	width:100%;
+}
+
 
 }
 

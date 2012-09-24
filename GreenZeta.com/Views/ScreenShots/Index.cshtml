@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Index";
 }
-
+@if(Request.IsAuthenticated) {
 <h2>Index</h2>
 
 <p>
@@ -43,3 +43,7 @@
 }
 
 </table>
+}
+else {
+    @:[ @Html.ActionLink("Log On", "LogOn", "Account") ]
+}

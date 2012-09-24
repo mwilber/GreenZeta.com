@@ -55,7 +55,7 @@ $(document).ready( function($){
     $(".newsSlider").facebookfeed(
 	{
 		id:'102352989996', 
-		access_token:'AAAB2vGwl0cMBAGh6MoMnIMy57DKyzxJjuad0OV6eRTerg7Usxz9HitxDZBvMErV4EVaPmkEHELRPC2zMzS7lNgCdPvKgfUgCr6A0jnQZDZD',
+		access_token:'AAADZBCZBwUUGABACz2ZBd3s6SQQW2hnMJhb764dkjvfGA8ewZAODGyI6sNzFKev6sDMZB7MX0EzkBzEQRwDIb5n3c4bCg22bpOXrfjx7u1wZDZD',
 		query:{limit:6}
 	},
 	function(){
@@ -64,8 +64,9 @@ $(document).ready( function($){
 	        // as an example, enable keyboard arrows nav
 	        keyboardNavEnabled: true,
 	        autoScaleSlider: true,
-	        autoScaleSliderWidth: 60,
-       		autoScaleSliderHeight: 50,
+	        arrowsNavHideOnTouch: true,
+	        autoScaleSliderWidth: $('#news li').width(),
+       		autoScaleSliderHeight: ($('#news li').height()+30),
 	        imageScaleMode: 'fill',
 	        loop: true,
 	    });

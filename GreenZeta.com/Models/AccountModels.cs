@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Web.Mvc;
 using System.Web.Security;
 
-namespace GreenZeta.com.DAL
+namespace GreenZeta.com.Models
 {
 
     public class ChangePasswordModel

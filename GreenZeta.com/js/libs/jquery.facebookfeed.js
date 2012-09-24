@@ -11,7 +11,7 @@
     $.fn.facebookfeed=function(options, callbackFnk){
 		var settings={
 			id: '145975662131224', //id of the facebook entity
-			template: '<li class="post rsContent"><img class="postimg" src="${picture}"/><p class="postlink"><a href="${link}" target="_blank">${name}</a></p><p class="postmessage">${message}</p></li>',
+			template: '<li class="post rsContent"><img class="postimg" src="${picture}"/><p class="postlink"><a href="${link}" target="_blank">${name}</a></p><p class="postmessage">${message}</p><div style="clear:both;"></div></li>',
 			query: {},
 			access_token: ''
 		};

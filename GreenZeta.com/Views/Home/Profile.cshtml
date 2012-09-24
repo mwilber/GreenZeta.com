@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<GreenZeta.com.Models.Project>
 @{
     ViewBag.Title = "GreenZeta Profile: "+Model.FirstOrDefault().title;
-    ViewBag.Icon = Model.FirstOrDefault().icon;
+    ViewBag.Icon = "http://www.greenzeta.com/images/portfolio/"+Model.FirstOrDefault().icon;
     ViewBag.Description = Model.FirstOrDefault().caption;
     ViewBag.BodyClass = "profile";
     Layout = "~/Views/Shared/_LayoutGZ.cshtml";

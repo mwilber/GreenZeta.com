@@ -496,8 +496,7 @@ body
 #news li{
 	/*float:left;*/
 	color:#fff;
-	width:268px;
-	height:201px;
+	width:100%;
 }
 
 #news li h4{
@@ -578,6 +577,7 @@ body
 #aboutgroup .col1 ul{
 	list-style:disc;
 	margin-left:20px;
+	margin-bottom:0px;
 }
 
 #aboutgroup .col1 ul li{
@@ -604,6 +604,24 @@ body
 	display: block;
 	float: right;
 	margin: 5px 0px 0px 15px;
+}
+
+#aboutgroup .col2 ul li.social{
+	height:35px;
+}
+
+#aboutgroup .github{
+	float:left;
+	clear: both;
+	width:100%;
+	margin: 10px 20px 15px 20px;
+	font-weight: normal;
+	font-size: 14px;
+	vertical-align: top;
+}
+
+#aboutgroup .github a{
+	vertical-align: top;
 }
 
 

@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Details";
 }
-
+@if(Request.IsAuthenticated) {
 <h2>Details</h2>
 
 <fieldset>
@@ -23,3 +23,7 @@
     @Html.ActionLink("Edit", "Edit", new { id=Model.TagID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+}
+else {
+    @:[ @Html.ActionLink("Log On", "LogOn", "Account") ]
+}
