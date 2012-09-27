@@ -32,7 +32,7 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 
 #zeta{display:none;}
 
-
+#featured{height:300px;}
 
 
 /***** Screen Bigger than 960px *****/
@@ -60,6 +60,7 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 	width:100%;
 }
 
+#featured{height:300px;}
 
 }
 
@@ -90,6 +91,8 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 #aboutgroup .github{
 	width: 300px;
 }
+
+#featured{height:250px;}
 
 
 }
@@ -130,6 +133,8 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 	width:100%;
 }
 
+#featured{height:250px;}
+
 	
 }
 
@@ -169,6 +174,8 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 #aboutgroup .github{
 	width:100%;
 }
+
+#featured{height:250px;}
 
 
 }

@@ -59,8 +59,22 @@
 	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
 	<script src="/js/libs/jquery.facebookfeed.js" type="text/javascript"></script>
     <script src="/js/script.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-76054-2']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
 </head>
 <body class="@ViewBag.BodyClass">
+	<a id="zeta" href="http://www.mwilber.com" target="_blank"><img src="/images/greenzeta.png"/></a> 
     <div id="maingroup" class="row">
     	<div id="headergroup" class="row">
 		    <div id="header" class="grid_12">
@@ -71,7 +85,8 @@
 				    <div id="hga"></div>
 				    <div id="hgb"></div>
 			    </div>
-	            <a id="btn_home" href="#" class="glass roundcorners"><img src="/images/appbar.home.png"/></a>
+			    <div id="headcopy">Internet Software by Matthew Wilber</div>
+	            <a id="btn_home" href="#" class="glass roundcorners"><img src="/images/appbar.lines.horizontal.4.png"/></a>
 		    </div>
             <div id="menu" class="glass roundcorners arrow_box_black">
                 <ul>
