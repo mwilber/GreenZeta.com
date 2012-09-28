@@ -9,7 +9,7 @@
 
 <div class="row">
 	<div id="featured" class="grid_12 royalSlider rsDefault">
-    @foreach (var item in Model.featuredProjects)
+    @foreach (var item in Model.featuredProjects.OrderByDescending(s => s.launchDate))
     {
         <div>
 			<a href="/home/profile/@item.alias"><img src="/images/portfolio/@item.banner" class="max-img rsImg" alt="This is caption text one" /></a>
