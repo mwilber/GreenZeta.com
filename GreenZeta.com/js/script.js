@@ -22,6 +22,10 @@ $(document).ready( function($){
             delay: 3000
         }
     });
+    
+    $('.scroll-pane').jScrollPane({
+    		showArrows: true
+    	});
 
     $('#gallery-1').royalSlider({
         fullscreen: {

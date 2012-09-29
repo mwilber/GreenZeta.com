@@ -439,7 +439,8 @@ body
 
 #productsb{
 	list-style:none;
-	width:1500px;
+	width:1150px;
+	height: 150px;
 }
 
 #productsb li{
@@ -447,7 +448,7 @@ body
 	float:left;
 	margin: 10px 20px;
 	text-align:center;
-	width:130px;
+	width:120px;
 }
 
 #productsb li a img
