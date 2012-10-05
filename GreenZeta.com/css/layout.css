@@ -30,6 +30,9 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 	width: 900px;
 }
 
+#clientgroup, #taggroup {margin-left:95px;}
+#socialgroup{ margin: 10px 10px 20px 50px; }
+
 #zeta{display:none;}
 
 #featured{height:300px;}
@@ -87,6 +90,7 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 	top: 203px;
 	width: 711px;
 }
+#clientgroup ul, #taggroup ul {width: 460px;}
 #menu{ margin-left:160px; }
 #aboutgroup .github{
 	width: 300px;
@@ -121,20 +125,26 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 #title{
 	padding: 10px 0px 5px 15px;
 	margin-top: 0px;
-	top: 112px;
+	top: 168px;
 	width: 285px;
 }
 #menu{ margin-left:-59px; }
 
-#descriptiongroup{ margin: 0px 20px 20px 20px; }
-#socialgroup{ margin: -5px 10px 20px 20px; }
-#socialgroup div{ clear:both; margin-top:20px; }
+#clientgroup, #taggroup {margin-left:0px;}
+#clientgroup ul, #taggroup ul {width: 200px;}
+
+#descriptiongroup{ margin: 0px 20px 20px 20px; text-align:justify; }
+#socialgroup{ margin: 0px 10px 20px 20px; }
+#socialgroup div{ clear:both; margin-top:0px; }
 #aboutgroup .github{
 	width:100%;
 }
 
 #featured{height:250px;}
-
+#header #headcopy {width: 100px;}
+#header, #banner{margin:0px;}
+#screengroup{border:none; border-top: solid 1px #666;}
+#spcr1, #spcr2{display:none;}
 	
 }
 
@@ -162,21 +172,27 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 	position: absolute;
 	z-index: 50;
 	font-weight: bold;
-	top: 112px;
+	top: 202px;
 	width: 441px;
 }
 #menu{ margin-left:19px; }
 
-#descriptiongroup{ margin: 0px 20px 20px 20px; }
-#socialgroup{ margin: -5px 10px 20px 20px; }
+#clientgroup, #taggroup {margin-left:0px;}
+#clientgroup ul, #taggroup ul {width: 350px;}
+#descriptiongroup{ margin: 0px 20px 20px 20px; text-align:justify; }
+#socialgroup{ margin: 0px 10px 20px 20px; }
 
-#socialgroup div{ clear:both; margin-top:20px; }
+#socialgroup div{ clear:both; margin-top:0px; }
 #aboutgroup .github{
 	width:100%;
 }
 
 #featured{height:250px;}
 
+#header #headcopy {width: 100px;}
+#header, #banner{margin:0px;}
+#screengroup{border:none; border-top: solid 1px #666;}
+#spcr1, #spcr2{display:none;}
 
 }
 
