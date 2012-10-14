@@ -48,12 +48,12 @@ $(document).ready( function($){
 
     $('#hgb').mouseenter(HeadRight).mouseleave(HeadReset).bind('touchstart', HeadRight).bind('touchend', HeadReset);
 
-    $('#btn_home').click(
-        function(){
-            $('#menu').toggle(); 
-            return false;
-        }
-    );
+//    $('#btn_home').click(
+//        function(){
+//            $('#menu').toggle(); 
+//            return false;
+//        }
+//    );
     
     // Set up the news feed
 //    $(".newsSlider").facebookfeed(

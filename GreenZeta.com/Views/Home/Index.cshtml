@@ -21,14 +21,14 @@
 <div class="row">
 	<div class="grid_6">
         <a id="portfolio" name="portfolio"></a>
-        <div id="portfoliogroup" class="glass-a roundcorners">
+        <div id="portfoliogroup" class="roundcorners">
 		<h2>Portfolio</h2>
         <ul id="portfoliob" class="taglist">
         @foreach (var group in Model.tagCloud.SelectMany(p => p.ProjectTags).GroupBy(c => c.Tag))
         {
             if (group.FirstOrDefault().Tag.type == "medium")
             {
-            <li class="tag-@(group.Count() / 3) arrow_box">@Html.ActionLink(group.FirstOrDefault().Tag.name, "Listing", new { id = group.FirstOrDefault().Tag.name })</li>
+            <li class="tag-@(group.Count() / 3)">@Html.ActionLink(group.FirstOrDefault().Tag.name, "Listing", new { id = group.FirstOrDefault().Tag.name })</li>
             }
         }
         </ul>
@@ -47,7 +47,7 @@
 <div class="row">
 	<div class="grid_12">
         <a id="products" name="products"></a>
-        <div id="productsgroup" class="glass-a roundcorners">
+        <div id="productsgroup" class="roundcorners">
 		    <a href="/Home/Listing/Product"><h2>Products</h2></a>
 		    <div id="productsblock" class="scroll-pane horizontal-only">
 		    <ul id="productsb">
@@ -65,7 +65,7 @@
 <div class="row base">
 	<div class="grid_4">
         <a name="news"></a>
-        <div id="newsgroup" class="glass roundcorners">
+        <div id="newsgroup" class="roundcorners">
 		<h2>News</h2>
 		<ul id="news" class="newsSlider rsDefault">
 		</ul>
@@ -73,7 +73,7 @@
 	</div>
 	<div class="grid_8">
         <a id="about" name="about"></a>
-        <div id="aboutgroup" class="glass roundcorners">
+        <div id="aboutgroup" class="roundcorners">
         <h2>About</h2>
         	<div class="col1">
 	        	<p>GreenZeta is the portfolio of internet software developer Matthew Wilber.</p>

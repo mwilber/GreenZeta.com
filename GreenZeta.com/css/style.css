@@ -301,17 +301,18 @@ body
 {
     /*background-color:#333;*/
     /*background-color:rgba(242, 232, 213, 0.4);*/
-   background-color:rgba(8, 4, 0, 0.8);
-   border: solid 1px #666;
+   background-color:rgba(8, 4, 0, 0.3);
+   /*border: solid 1px #666;*/
     margin: 20px;
     min-height:250px;
 }
 
 #portfoliogroup h2
 {
-    padding: 10px 0px 0px 20px;
+    padding: 10px 0px 10px 20px;
     color:#fff;
     font-weight: bold;
+    letter-spacing: 3px;
 }
 
 #portfoliogroup #portfoliob
@@ -323,7 +324,7 @@ body
 .taglist li
 {
     float:left;
-    margin:0px 0px 10px 20px;
+    margin:0px 0px 10px 10px;
     padding:2px 5px;
     background:#d1be9d none;
     color:#4f3e21;
@@ -381,7 +382,7 @@ body
     display: block;
     background-position: center center;
     text-decoration:none;
-    border: solid 1px #666;
+    /*border: solid 1px #666;*/
 }
 
 #featuredproduct strong
@@ -414,16 +415,17 @@ body
 #productsgroup{
 	margin: 0px 20px 20px 20px;
 	background-color:#333;
-	background-color:rgba(0, 0, 25, 0.8);
-	border: solid 1px #666;
+	background-color:rgba(0, 0, 25, 0.3);
+	/*border: solid 1px #666;*/
 }
 
 #productsgroup h2
 {
-    margin:5px 15px 0px 10px;
+    margin:5px 15px 10px 10px;
     padding: 10px 0px 0px 20px;
     color:#fff;
     font-weight:bold;
+    letter-spacing: 3px;
 }
 
 #productsgroup a
@@ -480,15 +482,16 @@ body
 
 #newsgroup{
 	overflow:hidden;
-	background-color:rgba(0, 0, 0, 0.8);
+	background-color:rgba(0, 0, 0, 0.3);
 	min-height:260px;
 	margin-bottom:20px;
-	border: solid 1px #666;
+	/*border: solid 1px #666;*/
 }
 
 #newsgroup h2
 {
     margin:10px;
+    letter-spacing: 3px;
 }
 
 #news{
@@ -575,15 +578,16 @@ body
 
 #aboutgroup{
 	overflow:hidden;
-	background-color:rgba(0, 0, 0, 0.8);
+	background-color:rgba(0, 0, 0, 0.3);
 	min-height:260px;
 	margin-bottom:20px;
-	border: solid 1px #666;
+	/*border: solid 1px #666;*/
 }
 
 #aboutgroup h2
 {
     margin:10px;
+    letter-spacing: 3px;
 }
 
 #aboutgroup .col1{
@@ -677,15 +681,28 @@ body
 	margin-top: -22px;
 }
 
+.listing .taglist
+{
+    margin-top: 12px;
+    margin: 12px 0px 0px 200px;
+}
+
+.listing .taglist li {
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    margin: 0px 0px 5px 7px;
+}
+
 #listing .project
 {
     display:block;
     float:left;
     padding:5px;
     height: 100px;
-    border: solid 1px #666;
+    /*border: solid 1px #666;*/
     margin:0px 0px 10px 10px;
-    background-color:rgba(0, 0, 0, 0.8);
+    background-color:rgba(0, 0, 0, 0.5);
     transition: all .5s linear;
 	-o-transition: all .5s linear;
 	-moz-transition: all .5s linear;
@@ -699,7 +716,7 @@ body
     float:left;
     padding:5px;
     height: 100px;
-    border: solid 1px #999;
+    /*border: solid 1px #999;*/
     margin:0px 0px 10px 10px;
     background-color: rgba(255, 255, 255, 0.8);
 	color: #000;
@@ -764,6 +781,7 @@ body
   
    #clientgroup{
    	margin-top:20px;
+   	clear:both;
    	float:left;
    }
   

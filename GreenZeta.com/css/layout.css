@@ -13,8 +13,8 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 
 #listing{ width: 960px; }
 #listing .project{ width: 284px; margin: 0px 0px 10px 10px; }
-.row div.rsGCaption { margin-top: -73px; padding: 10px 0px; }
-.row div.rsGCaption figure{ padding-left:50px; font-size:30px; }
+.row div.rsGCaption { margin-top: -60px; padding: 10px 0px; }
+.row div.rsGCaption figure{ padding-left:50px; font-size:20px; }
 #featuredproduct{ width:425px; height: 250px; margin: 20px 0px 0px 0px; }
 #newsgroup{  margin: 0px 0px 0px 20px; }
 #aboutgroup{ margin: 0px 20px 20px 0px; }
@@ -45,8 +45,8 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 
 #listing{ width: 1260px; }
 #listing .project{ width: 265px; margin: 0px 0px 10px 10px; }
-.row div.rsGCaption { margin-top: -73px; padding: 10px 0px; }
-.row div.rsGCaption figure{ padding-left:50px; font-size:30px; }
+.row div.rsGCaption { margin-top: -60px; padding: 10px 0px; }
+.row div.rsGCaption figure{ padding-left:50px; font-size:20px; }
 #featuredproduct{ width:535px; height: 250px; }
 #maingroup.row{width:1160px;}
 
@@ -76,8 +76,8 @@ span.example									{ margin-bottom:5px; padding:5px 0 5px 0; background-color:
 
 #listing{ width: 870px; }
 #listing .project{ width: 342px; margin: 0px 0px 10px 10px; }
-.row div.rsGCaption { margin-top: -57px; padding: 5px 0px; }
-.row div.rsGCaption figure{ padding-left: 40px; font-size: 25px; }
+.row div.rsGCaption { margin-top: -50px; padding: 5px 0px; }
+.row div.rsGCaption figure{ padding-left: 40px; font-size: 20px; }
 #featuredproduct{ width:335px; height: 250px; }
 #featured{margin-top:0px;}
 #maingroup.row{width:741px;}

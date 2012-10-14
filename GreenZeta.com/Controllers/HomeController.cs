@@ -40,6 +40,7 @@ namespace GreenZeta.com.Controllers
             var viewModel = new HomeListingData();
             viewModel.tag = id;
 
+            viewModel.tagCloud = from prjtg in db.Projects select prjtg;
             viewModel.projects = from prj in db.Projects
                            join prjtg in db.ProjectTags on prj.ProjectID equals prjtg.ProjectID
                            where prjtg.Tag.name == id

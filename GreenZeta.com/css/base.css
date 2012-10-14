@@ -41,8 +41,16 @@ table 									{ border-collapse:collapse; border-spacing:0; }
 /***** Basic Styles *****/
 
 html 									{ overflow-y:scroll; overflow:-moz-scrollbars-vertical; }
-body									{ margin:20px 0 0 0; padding:0; background-color:#000; font:13px 'Lato',Helvetica, Arial, sans-serif; color:#fff; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none; }
-
+body									{ margin:20px 0 0 0; padding:0; background-color:#627ea7; background-image:url('../images/bkg_fade.png'); background-position:top left; background-repeat:no-repeat; font:13px 'Lato',Helvetica, Arial, sans-serif; font-weight:300; letter-spacing:1px; color:#fff; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none; }
+/*body									{background: #273244;
+											background: -moz-linear-gradient(-45deg,  #273244 0%, #627ea7 100%);
+											background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#273244), color-stop(100%,#627ea7));
+											background: -webkit-linear-gradient(-45deg,  #273244 0%,#627ea7 100%);
+											background: -o-linear-gradient(-45deg,  #273244 0%,#627ea7 100%);
+											background: -ms-linear-gradient(-45deg,  #273244 0%,#627ea7 100%);
+											background: linear-gradient(135deg,  #273244 0%,#627ea7 100%);
+											filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#273244', endColorstr='#627ea7',GradientType=1 );
+										}*/
 /***** Typography *****/
 
 h1, h2, h3, h4, h5, h6 					{ margin:0; padding:0; font-family:'Lato',Helvetica, Arial, sans-serif; font-weight:900; } 

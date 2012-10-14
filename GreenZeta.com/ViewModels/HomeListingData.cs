@@ -9,6 +9,7 @@ namespace GreenZeta.com.ViewModels
     public class HomeListingData
     {
         public IEnumerable<Project> projects { get; set; }
+        public IEnumerable<Project> tagCloud { get; set; }
         public string tag { get; set; }
     }
 }

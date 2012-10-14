@@ -8,7 +8,16 @@
 }
 <div class="row">
 	<div class="grid_12">
-        <h2 class="tag-0 arrow_box">@Model.tag</h2>
+        <h2 class="tag-0">@Model.tag</h2>
+        <ul id="portfolio" class="taglist">
+        @foreach (var group in Model.tagCloud.SelectMany(p => p.ProjectTags).GroupBy(c => c.Tag))
+        {
+            if (group.FirstOrDefault().Tag.type == "medium")
+            {
+            <li class="tag-@(group.Count() / 3)">@Html.ActionLink(group.FirstOrDefault().Tag.name, "Listing", new { id = group.FirstOrDefault().Tag.name })</li>
+            }
+        }
+        </ul>
 	</div>
 </div>
 
@@ -17,7 +26,7 @@
     <div id="listing" class="grid_12">
     @foreach (var item in Model.projects.OrderByDescending(s => s.launchDate)) {
         @*<div class="project">*@
-        <a class="project glass roundcorners" href="/home/profile/@item.alias">
+        <a class="project roundcorners" href="/home/profile/@item.alias">
             <img src="/images/portfolio/@item.icon" width="64" height="64" />
             <span class="title">@Html.DisplayFor(modelItem => item.title)</span>
             @Html.DisplayFor(modelItem => item.caption)
