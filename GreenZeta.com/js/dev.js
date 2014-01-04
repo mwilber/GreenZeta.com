@@ -77,6 +77,7 @@ $(function () {
         // options
         itemSelector: '.item',
         layoutMode: 'masonry',
+        sortBy: 'random',
         filter: _filter,
         resizable: false, // disable normal resizing
         // set columnWidth to a percentage of container width

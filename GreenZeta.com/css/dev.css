@@ -379,6 +379,11 @@ header .grass.right{
 	height:100%;
 }
 
+.item .background img{
+	width:100%;
+	height:100%;
+}
+
 .item .header{
 	width:100%;
 	padding:5px 10px;
@@ -469,10 +474,48 @@ header .grass.right{
 	margin-top:5px;
 }
 
+.item.tweet .badge{
+	background-color:#4099ff;
+	
+}
+
+.item.tweet{
+	background-color:#4099ff;
+}
+
+.item.tweet .background
+{
+    background:#fff;
+	opacity: 0.5;
+}
+
+.item.tweet .post{
+	margin-top:40px;
+	width: 200px;
+	line-height: 1.25em;
+	font-size: 0.9em;
+	padding:10px;
+}
+
+.item.tweet .post strong{
+	width:100%;
+	position: relative;
+	line-height: 1.25em;
+	font-size: 1.25em;
+}
+
+.item.tweet .post p{
+	width:100%;
+	position: relative;
+	margin-top:5px;
+}
+
 .item.gamma .header{
 	height:24px;
 	font-size:0.75em;
 	padding: 0px 5px 0px 30px;
+	width: 70px;
+	font-weight:bold;
 }
 
 .item.gamma .badge{

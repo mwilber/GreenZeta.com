@@ -17,15 +17,31 @@
     </div>
 }
 
-@foreach (var item in Model.featuredProjects.OrderByDescending(s => s.launchDate).Skip(1).Take(1))
+@foreach (var item in Model.Products.OrderByDescending(s => s.launchDate).Take(1))
 {
-    <div class="item beta proj">
+    <div class="item alpha prod">
 	    <div class="background" style="background:#ccc url('http://www.greenzeta.com/images/portfolio/@item.banner') center center no-repeat"></div>
 	    <div class="header">
-		    <div class="badge fa fa-briefcase"></div>
-		    <strong>@item.title</strong>
+		    <div class="badge">&zeta;</div>
+		    <strong>Featured Product</strong>
+		    <br/>
+		    @item.title
 	    </div>
     </div>
+}
+
+@foreach (var group in Model.tagCloud.SelectMany(p => p.ProjectTags).GroupBy(c => c.Tag).OrderByDescending(s => s.Count()))
+{
+    if (group.FirstOrDefault().Tag.type == "medium")
+    {
+    <div class="item gamma tag">
+		<div class="background fa fa-code"></div>
+		<div class="header">
+			<div class="badge fa fa-briefcase"></div>
+			@group.FirstOrDefault().Tag.name
+		</div>
+	</div>
+    }
 }
 
 <div class="item beta doodle">
@@ -33,3 +49,52 @@
 		<img src="http://www.mwilber.com/wp-content/uploads/2011/12/007_1-150x150.png"/>
 	</div>
 </div>
+
+<div class="item beta blog">
+	<div class="background" style="background:#ccc url('http://www.mwilber.com/wp-content/uploads/2013/09/lia_chromecast-300x219.jpg') center center no-repeat"></div>
+	<div class="header">
+		<div class="badge fa fa-rss"></div>
+		<strong>mwilber.com</strong>
+	</div>
+	<div class="post">
+		<strong>Chromecast: A Parent’s Perspective</strong>
+		<p>It all started when my daughter was watching James and the Giant Peach, on Netflix. I found her waiting in the next room. One of the scenes had frightened her and she was waiting for it to end. </p>
+	</div>
+</div>
+
+<div class="item beta tweet">
+    <div class="background"></div>
+	<div class="header">
+		<div class="badge fa fa-twitter"></div>
+		<strong>&#64;greenzeta</strong>
+	</div>
+	<div class="post">
+		<p>140 Characters of pure awesome</p>
+	</div>
+</div>
+
+@foreach (var item in Model.featuredProjects.OrderByDescending(s => s.launchDate).Skip(1))
+{
+    <div class="item gamma proj">
+        <div class="background">
+			<img src="http://www.greenzeta.com/images/portfolio/@item.icon"/>
+		</div>
+		<div class="header">
+			<div class="badge fa fa-briefcase"></div>
+			@item.title
+		</div>
+    </div>
+}
+
+@foreach (var item in Model.Products.OrderByDescending(s => s.launchDate).Skip(1))
+{
+    <div class="item gamma prod">
+		<div class="background">
+			<img src="http://www.greenzeta.com/images/portfolio/@item.icon"/>
+		</div>
+		<div class="header">
+			<div class="badge">&zeta;</div>
+			@item.title
+		</div>
+	</div>
+}
