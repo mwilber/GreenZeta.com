@@ -35,6 +35,28 @@ namespace GreenZeta.com.Controllers
             return View(viewModel);
         }
 
+        public ViewResult Dev()
+        {
+            var viewModel = new HomeDevData();
+
+            viewModel.tagCloud = from prjtg in db.Projects select prjtg;
+            viewModel.Products = from prj in db.Projects
+                                 join prjtg in db.ProjectTags on prj.ProjectID equals prjtg.ProjectID
+                                 where prjtg.Tag.name == "product"
+                                 select prj;
+            viewModel.featuredProjects = from prj in db.Projects
+                                         join prjtg in db.ProjectTags on prj.ProjectID equals prjtg.ProjectID
+                                         where prjtg.Tag.name == "featuredproject"
+                                         select prj;
+            viewModel.featuredProduct = from prj in db.Projects
+                                        join prjtg in db.ProjectTags on prj.ProjectID equals prjtg.ProjectID
+                                        where prjtg.Tag.name == "featuredproduct"
+                                        select prj;
+            viewModel.featuredProduct.Take(1).ToList();
+
+            return View(viewModel);
+        }
+
         public ActionResult Listing(string id)
         {
             var viewModel = new HomeListingData();

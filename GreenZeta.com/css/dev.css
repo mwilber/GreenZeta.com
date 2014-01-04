@@ -1,0 +1,537 @@
+﻿/* Start: Recommended Isotope styles */
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
+
+/**** Base styles ****/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  padding: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.7em;
+  background: #1F1E1D;
+  color: #FFF;
+}
+
+h1, h2, h3, p, ul, ol, pre, dl {
+  margin-bottom: 1.0em;
+}
+
+h1, h2, #super-list, .element, .tagline, #index-list, 
+.super-list .link {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1, h2, h3 { font-weight: bold; }
+
+h1 {
+  font-size: 32px;
+  line-height: 1.1em;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.1em;
+}
+
+ul, ol {
+  margin-left: 1.5em;
+}
+
+a,
+a code {
+  color: #FB4;
+  text-decoration: none;
+}
+
+a:hover,
+a:hover code { 
+  color: #4BF; 
+}
+
+a:active,
+a:active code {
+  color: #1FB;
+  background: black;
+}
+
+a img { border: none; }
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+blockquote {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  border-left: 1px solid #333;
+  font-style: italic;
+}
+
+/**** Isotope styles ****/
+
+/* required for containers to inherit vertical size from window */
+html,
+body {
+  height: 100%;
+}
+
+#container {
+  border: 1px solid #666;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.element {
+  width: 110px;
+  height: 110px;
+  margin: 5px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background: #888;
+  color: #222;
+  -webkit-border-top-right-radius: 1.2em;
+      -moz-border-radius-topright: 1.2em;
+          border-top-right-radius: 1.2em;
+}
+
+.element.alkali          { background: #F00; background: hsl(   0, 100%, 50%); }
+.element.alkaline-earth  { background: #F80; background: hsl(  36, 100%, 50%); }
+.element.lanthanoid      { background: #FF0; background: hsl(  72, 100%, 50%); }
+.element.actinoid        { background: #0F0; background: hsl( 108, 100%, 50%); }
+.element.transition      { background: #0F8; background: hsl( 144, 100%, 50%); }
+.element.post-transition { background: #0FF; background: hsl( 180, 100%, 50%); }
+.element.metalloid       { background: #08F; background: hsl( 216, 100%, 50%); }
+.element.other.nonmetal  { background: #00F; background: hsl( 252, 100%, 50%); }
+.element.halogen         { background: #F0F; background: hsl( 288, 100%, 50%); }
+.element.noble-gas       { background: #F08; background: hsl( 324, 100%, 50%); }
+
+
+.element * {
+  position: absolute;
+  margin: 0;
+}
+
+.element .symbol {
+  left: 0.2em;
+  top: 0.4em;
+  font-size: 3.8em;
+  line-height: 1.0em;
+  color: #FFF;
+}
+.element.large .symbol {
+  font-size: 4.5em;
+}
+
+.element.fake .symbol {
+  color: #000;
+}
+
+.element .name {
+  left: 0.5em;
+  bottom: 1.6em;
+  font-size: 1.05em;
+}
+
+.element .weight {
+  font-size: 0.9em;
+  left: 0.5em;
+  bottom: 0.5em;
+}
+
+.element .number {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: hsla(0,0%,0%,.5);
+  right: 0.5em;
+  top: 0.5em;
+}
+
+.variable-sizes .element.width2 { width: 230px; }
+
+.variable-sizes .element.height2 { height: 230px; }
+
+.variable-sizes .element.width2.height2 {
+  font-size: 2.0em;
+}
+
+.element.large,
+.variable-sizes .element.large,
+.variable-sizes .element.large.width2.height2 {
+  font-size: 3.0em;
+  width: 350px;
+  height: 350px;
+  z-index: 100;
+}
+
+.clickable .element:hover {
+  cursor: pointer;
+}
+
+.clickable .element:hover h3 {
+  text-shadow:
+    0 0 10px white,
+    0 0 10px white
+  ;
+}
+
+.clickable .element:hover h2 {
+  color: white;
+}
+
+
+
+/**** Greenzeta ****/
+
+body{
+	background:#fff;
+	padding:0px;
+}
+
+header{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:150px;
+	background:#000000 url('../images/stars.png'); top middle repeat;
+	overflow:hidden;
+}
+
+header .ground{
+	position:absolute;
+	width:100%;
+	height:150px;
+	top:85px;
+	background:#002114;
+	border-radius: 50%;
+	z-index:50;
+}
+
+header .hilight{
+	position:absolute;
+	top:112px;
+	left:50%;
+	width:60px;
+	height:2px;
+	margin-left:-30px;
+	border-radius:50%;
+	background:#d1ebd7;
+	z-index:100;
+	opacity: 0.9;
+	-webkit-box-shadow:  0px 0px 10px 7px #d1ebd7;
+    box-shadow:  0px 0px 10px 7px #d1ebd7;
+}
+
+header .zeta{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:150px;
+	color:#a1d9ae;
+	font-family:serif;
+	text-align:center;
+	font-size: 95px;
+	line-height: 97px;
+	z-index:150;
+	text-shadow: 0px 0px 25px #c0ebab;
+    filter: dropshadow(color=#c0ebab, offx=0, offy=0);
+}
+
+header .grassbkg{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:150px;
+	background: transparent url('../images/grass_c.png') bottom center repeat-x;
+	z-index:199;
+}
+
+header .grass{
+	position:absolute;
+	bottom:0px;
+	height:150px;
+	z-index: 200;
+}
+
+header .grass.left{
+	left:0px;
+}
+
+header .grass.right{
+	right:0px;
+}
+
+#container {
+	margin: 160px auto 20px;
+	border:none;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background: #888;
+  color: #222;
+}
+
+.item * {
+  position: absolute;
+  margin: 0;
+}
+
+.item.alpha { width: 320px; height:320px; }
+
+.item.beta { width: 210px; height:210px; }
+
+
+.item .background{
+	width:100%;
+	height:100%;
+}
+
+.item .header{
+	width:100%;
+	padding:5px 10px;
+	background:rgba(0,0,0,0.7);
+	color:#fff;
+	
+}
+
+.item .badge{
+	color:#fff;
+}
+
+.item.alpha .header{
+	height:50px;
+	font-size:1.15em;
+	padding-left:70px;
+}
+
+.item.alpha .badge{
+	width:60px;
+	height:60px;
+	margin-left:-70px;
+	margin-top:-5px;
+	font-size:50px;
+	line-height: 55px;
+	text-align:center;
+}
+
+.item.prod .badge{
+	font-family:serif;
+	background-color:#7cb750;
+	
+}
+
+.item.proj .badge{
+	line-height: 65px;
+	background-color:#9C6E2F;
+	
+}
+
+.item.beta .header{
+	height:30px;
+	font-size:1.15em;
+	padding-left:50px;
+}
+
+.item.beta .badge{
+	width:40px;
+	height:40px;
+	margin-left:-50px;
+	margin-top:-5px;
+	font-size: 30px;
+	line-height: 42px;
+	text-align:center;
+}
+
+.item.blog .badge{
+	background-color:#92AAD1;
+	
+}
+
+.item.blog{
+	background-color:#fff;
+}
+
+.item.blog .background{
+	opacity: 0.3;
+}
+
+.item.blog .post{
+	margin-top:40px;
+	width: 200px;
+	line-height: 1.25em;
+	font-size: 0.9em;
+	padding:10px;
+}
+
+.item.blog .post strong{
+	width:100%;
+	position: relative;
+	line-height: 1.25em;
+	font-size: 1.25em;
+}
+
+.item.blog .post p{
+	width:100%;
+	position: relative;
+	margin-top:5px;
+}
+
+.item.gamma .header{
+	height:24px;
+	font-size:0.75em;
+	padding: 0px 5px 0px 30px;
+}
+
+.item.gamma .badge{
+	width:24px;
+	height:24px;
+	margin-left:-30px;
+	margin-top:0px;
+	font-size:16px;
+	line-height: 22px;
+	text-align:center;
+}
+
+.item.gamma.tag .badge{
+	line-height: 25px;
+	background-color:#9C6E2F;
+	
+}
+
+.item.gamma.tag .background{
+	color:#DED1BF;
+	background-color:#9C8360;
+	font-size:60px;
+	line-height:125px;
+	text-align:center;
+}
+
+.item.gamma.prod .background img{
+	width:100%;
+	height:100%;
+}
+
+.item.doodle .background img{
+	width:100%;
+	height:100%;
+}
+
+
+/**** Infinite Scroll ****/
+
+#infscr-loading {
+  position: fixed;
+  text-align: center;
+  bottom: 30px;
+  left: 42%;
+  z-index: 100;
+  background: white;
+  background: hsla( 0, 0%, 100%, 0.9 );
+  padding: 20px;
+  color: #222;
+  font-size: 15px;
+  font-weight: bold;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
+
+
+/* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }

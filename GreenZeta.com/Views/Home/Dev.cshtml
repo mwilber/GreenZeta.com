@@ -1,0 +1,35 @@
+﻿@model GreenZeta.com.ViewModels.HomeDevData
+@{
+    ViewBag.Title = "Dev";
+    Layout = "~/Views/Shared/_LayoutIsotope.cshtml";
+}
+
+@foreach (var item in Model.featuredProjects.OrderByDescending(s => s.launchDate).Take(1))
+{
+    <div class="item alpha proj">
+	    <div class="background" style="background:#ccc url('http://www.greenzeta.com/images/portfolio/@item.banner') center center no-repeat"></div>
+	    <div class="header">
+		    <div class="badge fa fa-briefcase"></div>
+		    <strong>Featured Project</strong>
+		    <br/>
+		    @item.title
+	    </div>
+    </div>
+}
+
+@foreach (var item in Model.featuredProjects.OrderByDescending(s => s.launchDate).Skip(1).Take(1))
+{
+    <div class="item beta proj">
+	    <div class="background" style="background:#ccc url('http://www.greenzeta.com/images/portfolio/@item.banner') center center no-repeat"></div>
+	    <div class="header">
+		    <div class="badge fa fa-briefcase"></div>
+		    <strong>@item.title</strong>
+	    </div>
+    </div>
+}
+
+<div class="item beta doodle">
+	<div class="background">
+		<img src="http://www.mwilber.com/wp-content/uploads/2011/12/007_1-150x150.png"/>
+	</div>
+</div>
