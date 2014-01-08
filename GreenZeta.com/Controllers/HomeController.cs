@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Collections;
 using GreenZeta.com.DAL;
 using GreenZeta.com.Models;
 using GreenZeta.com.ViewModels;
@@ -53,6 +54,21 @@ namespace GreenZeta.com.Controllers
                                         where prjtg.Tag.name == "featuredproduct"
                                         select prj;
             viewModel.featuredProduct.Take(1).ToList();
+
+            //int idx = 0;
+            //while ( idx < viewModel.tagCloud.Count())
+            //while ( idx < 3)
+            //{
+            //    viewModel.arrGamma.Add(viewModel.tagCloud.Skip(idx).Take(1));
+            //}
+
+            //foreach (var group in viewModel.tagCloud.SelectMany(p => p.ProjectTags).GroupBy(c => c.Tag).OrderByDescending(s => s.Count()))
+            //{
+            //    if (group.FirstOrDefault().Tag.type == "medium")
+            //    {
+            //        //viewModel.arrGamma.Add(group.FirstOrDefault().Tag);
+            //    }
+            //}
 
             return View(viewModel);
         }
